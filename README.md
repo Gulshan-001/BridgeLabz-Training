@@ -99,3 +99,55 @@ Branch Used: core-java-practice
 ✅ Day 2 Status
 
 ✔️ Day 2 Completed Successfully
+
+📅 Day 3 – Training Log
+
+Date: 18 December 2025
+
+🏁 Day 3 Progress Overview
+
+On Day 3 of my BridgeLabz training, I shifted my focus to learning the basics of C# programming. I set up the required development environment, explored core language fundamentals, and began hands-on practice by solving multiple beginner-level problems.
+
+🔹 Step-by-Step Work Done
+1️⃣ Environment Setup
+
+Installed and configured the .NET SDK on my system
+
+Verified successful setup by running basic C# programs
+
+Understood the basic workflow for compiling and running C# applications
+
+2️⃣ Repository Creation
+
+Created a new GitHub repository for C# practice named core-sharp-practice
+
+Initialized the repository locally and linked it to GitHub
+
+3️⃣ Coding Practice
+
+Solved 10 basic C# programming questions
+
+Practiced fundamental concepts such as syntax, variables, input/output, and basic logic
+
+Ensured all programs executed correctly before committing
+
+📁 Programs Location:
+
+core-sharp-practice/
+4️⃣ Version Control
+
+Committed all C# programs with meaningful commit messages
+
+Successfully pushed all commits to the remote GitHub repository
+
+🧩 Coding Practice Summary (Day 3)
+
+Total Questions Solved: 10
+
+Area of Focus: C# Basics
+
+Repository Used: core-sharp-practice
+
+✅ Day 3 Status
+
+✔️ Day 3 Completed Successfully
