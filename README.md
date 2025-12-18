@@ -52,8 +52,10 @@ On Day 1 of my BridgeLabz training, I successfully set up my development workflo
 **✔️ Day 1 Completed Successfully**
 
 ---
-
 This marks the completion of **Day 1**.
+
+
+---
 
 📅 Day 2 – Training Log
 
@@ -99,6 +101,9 @@ Branch Used: core-java-practice
 ✅ Day 2 Status
 
 ✔️ Day 2 Completed Successfully
+
+---
+---
 
 📅 Day 3 – Training Log
 
