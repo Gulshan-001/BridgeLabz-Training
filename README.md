@@ -156,3 +156,55 @@ Repository Used: core-sharp-practice
 ✅ Day 3 Status
 
 ✔️ Day 3 Completed Successfully
+---
+
+📅 Day 4 – Training Log
+
+Date: 19 December 2025
+🏁 Day 4 Progress Overview
+
+On Day 4 of my BridgeLabz training, I continued advancing my C# knowledge, focusing on core data types, operators, and coding practices. I also practiced beginner-to-intermediate level exercises to strengthen my understanding.
+
+🔹 Step-by-Step Work Done
+1️⃣ Concepts Learned
+
+Studied C# basic data types
+
+Learned operators and their precedence (Arithmetic, Relational, Logical, Assignment, Unary, Ternary, Bitwise)
+
+Practiced naming conventions and proper variable usage
+
+Explored access modifiers (public, private, protected, internal)
+
+2️⃣ Coding Practice
+
+Practiced code examples for all types of operators mentioned above
+
+Completed two levels of practice sheets:
+
+LEVEL 1: 16 questions
+
+LEVEL 2: 12 questions
+
+Ensured all programs compiled and produced correct output
+
+3️⃣ Version Control
+
+Committed all practice code with clear, descriptive commit messages
+
+Successfully pushed all commits to the core-sharp-practice Git repository
+
+📁 Programs Location:
+
+core-sharp-practice/
+🧩 Coding Practice Summary (Day 4)
+
+Total Questions Solved: 28
+
+Area of Focus: C# Data Types, Operators, Access Modifiers, LEVEL 1 & 2 Practice Sheets
+
+Repository Used: core-sharp-practice
+
+✅ Day 4 Status
+
+✔️ Day 4 Completed Successfully
