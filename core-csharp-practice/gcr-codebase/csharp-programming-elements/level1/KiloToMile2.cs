@@ -1,12 +1,17 @@
 using System;
+
 class KiloToMile2
 {
     static void Main()
     {
         double kilometres;
-        int km=Console.ReadLine("Enter distance in kilometres: ");
-        kilometres=km;
-        double miles=kilometres/1.609;
+        
+        Console.Write("Enter distance in kilometres: ");
+        int km = int.Parse(Console.ReadLine());
 
-}
+        kilometres = km;
+        double miles = kilometres / 1.609;
+
+        Console.WriteLine("Distance in miles: " + miles);
+    }
 }
