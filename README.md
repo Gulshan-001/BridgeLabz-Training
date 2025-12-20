@@ -1,96 +1,71 @@
-# BridgeLabz Training – Day 1 🚀
+📅 Day 1 – Git & GitHub Fundamentals
 
-## 📅 Date
-**16 December 2025**
+Date: 16 December 2025
 
----
+🏁 Overview
 
-## 🏁 Day 1 Progress Overview
+Day 1 focused on setting up a proper development workflow using Git and GitHub while beginning problem-solving practice.
 
-On Day 1 of my BridgeLabz training, I successfully set up my development workflow using Git and GitHub, created a structured repository, and solved multiple coding problems as part of my daily practice.
+🔹 Work Done
 
----
+Created a Git repository named BridgeLabz-Training
 
-## 🔹 Step-by-Step Work Done
+Initialized the repository locally and connected it to GitHub
 
-### 1️⃣ Repository Creation
-- Created a new Git repository named **`BridgeLabz-Training`**
-- Initialized the repository locally and connected it to GitHub
+Created a working branch from main to maintain clean project structure
 
----
+Practiced disciplined branching and commits
 
-### 2️⃣ Branch Setup
-- Created a new working branch from the main branch
-- Ensured proper branch structure for clean and organized development
+🧩 Coding Practice
 
----
+Solved 5 logic-based programming problems, ensuring clean code and correct output before committing:
 
-### 3️⃣ Coding Practice
-- Solved **five coding problems** focusing on logic building and problem-solving skills
-- Implemented solutions using clean and readable code
-- Verified outputs for correctness before committing
+Hello World
 
----
+Palindrome Number
 
-### 4️⃣ Version Control
-- Committed each solution with meaningful commit messages
-- Pushed all commits to the remote GitHub repository successfully
+Remove Duplicates from Sorted Array
 
----
+Length of Last Word
 
-## 🧩 Coding Problems Solved (Day 1)
+Two Sum
 
-1. **Hello world**
-2. **Palindrome Number**
-3. **Remove Duplicates from Sorted Array**
-4. **Length of Last Word**
-5. **Two Sum**
+🔄 Version Control
 
----
+Used meaningful commit messages for each solution
 
-## ✅ Day 1 Mark
-**✔️ Day 1 Completed Successfully**
+Successfully pushed all commits to GitHub
 
----
-This marks the completion of **Day 1**.
+✅ Day 1 Completed Successfully
 
-
----
-
-📅 Day 2 – Training Log
+📅 Day 2 – Core Java Programming Elements
 
 Date: 17 December 2025
 
-🏁 Day 2 Progress Overview
+🏁 Overview
 
-On Day 2 of my BridgeLabz training, I focused heavily on hands-on coding practice by solving multiple core Java programming problems and organizing them efficiently within my practice branch.
+Day 2 emphasized hands-on Core Java practice, focusing on logic building and strengthening programming fundamentals.
 
-🔹 Step-by-Step Work Done
-1️⃣ Branch-Based Practice
+🔹 Work Done
 
-Continued work on the dedicated branch core-java-practice
+Continued development on a dedicated branch: core-java-practice
 
-Followed proper branching discipline to keep practice work isolated and organized
+Followed proper branch isolation for practice work
 
-2️⃣ Coding Practice
+Solved 10 Core Java programming questions
 
-Solved 10 programming practice questions
-
-
-Focused on strengthening Java fundamentals and logical thinking
-
-Ensured all programs compiled and ran correctly before committing
+Verified compilation and outputs for all programs
 
 📁 Programs Location:
-
 core-java-practice/gcr-codebase/programming-elements
-3️⃣ Version Control
 
-Committed all solutions with clear and descriptive commit messages
+🔄 Version Control
 
-Successfully pushed all updates to the remote GitHub repository
+Committed all solutions with clear, descriptive messages
 
-🧩 Coding Practice Summary (Day 2)
+Pushed updates to the remote GitHub repository
+
+🧩 Practice Summary
 
 Total Questions Solved: 10
 
@@ -98,113 +73,99 @@ Area of Focus: Core Java – Programming Elements
 
 Branch Used: core-java-practice
 
-✅ Day 2 Status
+✅ Day 2 Completed Successfully
 
-✔️ Day 2 Completed Successfully
-
----
----
-
-📅 Day 3 – Training Log
+📅 Day 3 – Introduction to C#
 
 Date: 18 December 2025
 
-🏁 Day 3 Progress Overview
+🏁 Overview
 
-On Day 3 of my BridgeLabz training, I shifted my focus to learning the basics of C# programming. I set up the required development environment, explored core language fundamentals, and began hands-on practice by solving multiple beginner-level problems.
+On Day 3, I transitioned to learning C# programming basics, setting up the environment and beginning hands-on practice.
 
-🔹 Step-by-Step Work Done
-1️⃣ Environment Setup
+🔹 Work Done
 
-Installed and configured the .NET SDK on my system
+Installed and configured the .NET SDK
 
-Verified successful setup by running basic C# programs
+Verified setup by running basic C# programs
 
-Understood the basic workflow for compiling and running C# applications
+Understood the workflow for compiling and running C# applications
 
-2️⃣ Repository Creation
+Created a new repository: core-sharp-practice
 
-Created a new GitHub repository for C# practice named core-sharp-practice
+🧩 Coding Practice
 
-Initialized the repository locally and linked it to GitHub
+Solved 10 beginner-level C# problems
 
-3️⃣ Coding Practice
+Practiced syntax, variables, input/output, and basic logic
 
-Solved 10 basic C# programming questions
-
-Practiced fundamental concepts such as syntax, variables, input/output, and basic logic
-
-Ensured all programs executed correctly before committing
+Ensured correct execution before committing
 
 📁 Programs Location:
-
 core-sharp-practice/
-4️⃣ Version Control
 
-Committed all C# programs with meaningful commit messages
+🔄 Version Control
 
-Successfully pushed all commits to the remote GitHub repository
+Used meaningful commit messages
 
-🧩 Coding Practice Summary (Day 3)
+Pushed all C# programs to GitHub
 
-Total Questions Solved: 10
+✅ Day 3 Completed Successfully
 
-Area of Focus: C# Basics
-
-Repository Used: core-sharp-practice
-
-✅ Day 3 Status
-
-✔️ Day 3 Completed Successfully
----
-
-📅 Day 4 – Training Log
+📅 Day 4 – C# Data Types & Operators
 
 Date: 19 December 2025
-🏁 Day 4 Progress Overview
 
-On Day 4 of my BridgeLabz training, I continued advancing my C# knowledge, focusing on core data types, operators, and coding practices. I also practiced beginner-to-intermediate level exercises to strengthen my understanding.
+🏁 Overview
 
-🔹 Step-by-Step Work Done
-1️⃣ Concepts Learned
+Day 4 focused on strengthening C# fundamentals, including data types, operators, and structured coding practices.
 
-Studied C# basic data types
+🔹 Concepts Covered
 
-Learned operators and their precedence (Arithmetic, Relational, Logical, Assignment, Unary, Ternary, Bitwise)
+C# basic data types
 
-Practiced naming conventions and proper variable usage
+Operators and precedence:
 
-Explored access modifiers (public, private, protected, internal)
+Arithmetic, Relational, Logical
 
-2️⃣ Coding Practice
+Assignment, Unary, Ternary, Bitwise
 
-Practiced code examples for all types of operators mentioned above
+Naming conventions and variable usage
 
-Completed two levels of practice sheets:
+Access modifiers: public, private, protected, internal
 
-LEVEL 1: 16 questions
+🧩 Coding Practice
 
-LEVEL 2: 12 questions
+Practiced code examples for all operator types
 
-Ensured all programs compiled and produced correct output
+Completed structured practice sheets:
 
-3️⃣ Version Control
+Level 1: 16 questions
 
-Committed all practice code with clear, descriptive commit messages
+Level 2: 12 questions
 
-Successfully pushed all commits to the core-sharp-practice Git repository
+Ensured correct compilation and output for all programs
 
 📁 Programs Location:
-
 core-sharp-practice/
-🧩 Coding Practice Summary (Day 4)
+
+📊 Practice Summary
 
 Total Questions Solved: 28
 
-Area of Focus: C# Data Types, Operators, Access Modifiers, LEVEL 1 & 2 Practice Sheets
+Area of Focus: C# Data Types, Operators, Access Modifiers
 
-Repository Used: core-sharp-practice
+✅ Day 4 Completed Successfully
+🏁 Overall Summary
 
-✅ Day 4 Status
+Total Training Days Covered: 4
 
-✔️ Day 4 Completed Successfully
+Technologies Used: Git, GitHub, Core Java, C#
+
+Key Focus Areas:
+
+Version control and branching discipline
+
+Programming fundamentals
+
+Logical thinking and clean coding practices
