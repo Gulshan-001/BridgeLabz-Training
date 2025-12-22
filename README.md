@@ -169,3 +169,39 @@ Version control and branching discipline
 Programming fundamentals
 
 Logical thinking and clean coding practices
+
+📅 Day 5 – Control Flow & Loops in C#
+
+Date: 20 December 2025
+
+🏁 Overview
+
+Day 5 focused on mastering control flow constructs and loops in C#, along with hands-on practice to strengthen logical thinking and program flow understanding.
+
+🔹 Concepts Covered
+
+Conditional Statements: if, if-else, if-else-if, switch
+
+Loops: for, while, do-while, foreach
+
+Nested conditionals and loop usage
+
+🧩 Coding Practice
+
+Completed structured exercises across three levels:
+
+Level 1: 18 questions
+
+Level 2: 9 questions
+
+Level 3: 6 questions
+
+Ensured all programs compiled correctly and produced expected outputs.
+
+🔄 Version Control
+
+Committed all solutions with clear, descriptive messages
+
+Pushed all updates to the core-sharp-practice GitHub repository
+
+✅ Day 5 Completed Successfully
