@@ -2,7 +2,7 @@ using System;
 
 class MultiplicationTable
 {
-    static void Main()
+    static void Main(string[] args)
     {
         Console.WriteLine("Enter a number:");
         int number = Convert.ToInt32(Console.ReadLine());

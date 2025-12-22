@@ -2,7 +2,7 @@ using System;
 
 class BMICalculation
 {
-    static void Main()
+    static void Main(string[] args)
     {
         Console.WriteLine("Enter weight in kg:");
         double weight = Convert.ToDouble(Console.ReadLine());

@@ -2,7 +2,7 @@ using System;
 
 class SumUntillZero
 {
-    static void Main()
+    static void Main(string[] args)
     {
         double total = 0.0;
         double value;

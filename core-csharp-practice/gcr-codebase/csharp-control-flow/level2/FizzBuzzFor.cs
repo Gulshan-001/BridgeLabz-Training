@@ -2,7 +2,7 @@ using System;
 
 class FizzBuzzFor
 {
-    static void Main()
+    static void Main(string[] args)
     {
         Console.WriteLine("Enter a positive integer:");
         int number = Convert.ToInt32(Console.ReadLine());

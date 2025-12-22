@@ -2,7 +2,7 @@ using System;
 
 class OddEvenRange
 {
-    static void Main()
+    static void Main(string[] args)
     {
         Console.WriteLine("Enter a natural number:");
         int number = Convert.ToInt32(Console.ReadLine());

@@ -2,7 +2,7 @@ using System;
 
 class EmployeeBonus
 {
-    static void Main()
+    static void Main(string[] args)
     {
         Console.WriteLine("Enter employee salary:");
         double salary = Convert.ToDouble(Console.ReadLine());

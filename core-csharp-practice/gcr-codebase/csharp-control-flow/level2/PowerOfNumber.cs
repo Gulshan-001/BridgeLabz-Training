@@ -2,7 +2,7 @@ using System;
 
 class PowerOfNumber
 {
-    static void Main()
+    static void Main(string[] args)
     {
         Console.WriteLine("Enter the number:");
         int number = Convert.ToInt32(Console.ReadLine());

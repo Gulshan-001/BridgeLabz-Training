@@ -2,7 +2,7 @@ using System;
 
 class YoungestOfThree
 {
-    static void Main()
+    static void Main(string[] args )
     {
         Console.WriteLine("Enter age of Amar:");
         int amarAge = Convert.ToInt32(Console.ReadLine());
