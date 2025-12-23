@@ -38,6 +38,8 @@ Successfully pushed all commits to GitHub
 
 ✅ Day 1 Completed Successfully
 
+---
+
 📅 Day 2 – Core Java Programming Elements
 
 Date: 17 December 2025
@@ -75,6 +77,8 @@ Branch Used: core-java-practice
 
 ✅ Day 2 Completed Successfully
 
+---
+
 📅 Day 3 – Introduction to C#
 
 Date: 18 December 2025
@@ -111,6 +115,8 @@ Used meaningful commit messages
 Pushed all C# programs to GitHub
 
 ✅ Day 3 Completed Successfully
+
+---
 
 📅 Day 4 – C# Data Types & Operators
 
@@ -156,19 +162,8 @@ Total Questions Solved: 28
 Area of Focus: C# Data Types, Operators, Access Modifiers
 
 ✅ Day 4 Completed Successfully
-🏁 Overall Summary
 
-Total Training Days Covered: 4
-
-Technologies Used: Git, GitHub, Core Java, C#
-
-Key Focus Areas:
-
-Version control and branching discipline
-
-Programming fundamentals
-
-Logical thinking and clean coding practices
+---
 
 📅 Day 5 – Control Flow & Loops in C#
 
@@ -176,7 +171,15 @@ Date: 20 December 2025
 
 🏁 Overview
 
-Day 5 focused on mastering control flow constructs and loops in C#, along with hands-on practice to strengthen logical thinking and program flow understanding.
+Day 5 REVISED OLD TOPICS.
+
+📅 Day 6 – Control Flow & Loops in C#
+
+Date: 22 December 2025
+
+🏁 Overview
+
+Day 6 focused on mastering control flow constructs and loops in C#, along with hands-on practice to strengthen logical thinking and program flow understanding.
 
 🔹 Concepts Covered
 
@@ -204,4 +207,4 @@ Committed all solutions with clear, descriptive messages
 
 Pushed all updates to the core-sharp-practice GitHub repository
 
-✅ Day 5 Completed Successfully
+✅ Day 6 Completed Successfully
