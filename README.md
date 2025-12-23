@@ -173,6 +173,8 @@ Date: 20 December 2025
 
 Day 5 REVISED OLD TOPICS.
 
+---
+
 📅 Day 6 – Control Flow & Loops in C#
 
 Date: 22 December 2025
@@ -208,3 +210,43 @@ Committed all solutions with clear, descriptive messages
 Pushed all updates to the core-sharp-practice GitHub repository
 
 ✅ Day 6 Completed Successfully
+
+---
+
+📅 Day 7 – Arrays in C#
+
+Date: 23 November 2025
+
+🏁 Overview
+
+Day 7 was dedicated to understanding arrays in C# in their entirety, covering both theoretical concepts and practical implementation through problem-solving.
+
+🔹 Concepts Covered
+
+Introduction to arrays
+
+Array declaration and initialization
+
+Accessing and modifying array elements
+
+Common array operations and basic functions
+
+Iterating through arrays using loops
+
+🧩 Coding Practice
+
+Solved array-based programming questions across two levels:
+
+Level 1: 10 questions
+
+Level 2: 10 questions
+
+All programs were tested to ensure correct logic and expected output.
+
+🔄 Version Control
+
+Committed all array-related solutions with meaningful commit messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 7 Completed Successfully
