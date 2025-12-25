@@ -21,7 +21,7 @@ class NaturalSum
 
         // calculate sum by calling method
         int sum = CalculateSum(n);
-
+    
         Console.WriteLine("The sum of first " + n + " natural numbers is " + sum);
     }
 }
