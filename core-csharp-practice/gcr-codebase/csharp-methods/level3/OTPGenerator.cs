@@ -1,7 +1,5 @@
 using System;
 
-namespace CSharpPractice
-{
     class OTPGenerator
     {
         // a. Generate 6-digit OTP
@@ -9,8 +7,7 @@ namespace CSharpPractice
         {
             Random rand = new Random();
             return rand.Next(100000, 1000000);
-        }
-
+        }        
         // c. Check if all OTPs are unique
         public static bool AreOTPsUnique(int[] otps)
         {
@@ -47,4 +44,3 @@ namespace CSharpPractice
             Console.WriteLine("All OTPs are unique? " + (isUnique ? "Yes" : "No"));
         }
     }
-}
