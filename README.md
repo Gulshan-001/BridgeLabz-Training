@@ -255,7 +255,7 @@ Successfully pushed the complete work to the GitHub repository
 
 📅 Day 8 – Methods in C#
 
-Date: 24 November 2025
+Date: 24 December 2025
 
 🏁 Overview
 
@@ -292,3 +292,43 @@ Committed all method-related solutions with clear commit messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 8 Completed Successfully
+
+---
+
+📅 Day 9 – Strings & Built-in Methods in C#
+
+Date: 26 December 2025
+
+🏁 Overview
+
+Day 9 focused on understanding strings in C#, along with additional practice on previously learned built-in methods to reinforce earlier concepts.
+
+🔹 Concepts Covered
+
+Introduction to strings
+
+String creation and immutability
+
+Common string operations and methods
+
+Practical usage of built-in methods for problem-solving
+
+🧩 Coding Practice
+
+String-based problems: 11 questions
+
+Extra practice on built-in methods:
+
+Level 1: 4 questions
+
+Level 2: 9 questions
+
+All programs were validated for correct logic and expected output.
+
+🔄 Version Control
+
+Committed all solutions with clear and descriptive commit messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 9 Completed Successfully
