@@ -250,3 +250,45 @@ Committed all array-related solutions with meaningful commit messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 7 Completed Successfully
+
+---
+
+📅 Day 8 – Methods in C#
+
+Date: 24 November 2025
+
+🏁 Overview
+
+Day 8 focused on gaining a complete understanding of methods in C#, including their structure, usage, and role in writing modular and reusable code.
+
+🔹 Concepts Covered
+
+Introduction to methods
+
+Method declaration and definition
+
+Method calling and execution flow
+
+Parameters and return types
+
+Reusability and code organization using methods
+
+🧩 Coding Practice
+
+Solved method-based programming problems across multiple levels:
+
+Level 1: 11 questions
+
+Level 2: 12 questions
+
+Level 3: 10 questions
+
+All programs were tested for correctness and logical flow.
+
+🔄 Version Control
+
+Committed all method-related solutions with clear commit messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 8 Completed Successfully
