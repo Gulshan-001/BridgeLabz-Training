@@ -332,3 +332,84 @@ Committed all solutions with clear and descriptive commit messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 9 Completed Successfully
+
+--
+
+📅 Day 10 – Scenario-Based Problems (Strings & Arrays) in C#
+
+Date: 29 December 2025
+
+🏁 Overview
+
+Day 10 focused on solving real-world, scenario-based programming problems using Strings and Arrays in C#, emphasizing data analysis, text processing, and robust logic handling.
+
+🔹 Scenarios & Concepts Covered
+1️⃣ Strings – Sentence Formatter
+
+Designed a method to auto-correct poorly formatted user input in a text-editing scenario by:
+
+Trimming extra spaces
+
+Ensuring exactly one space after punctuation
+
+Capitalizing the first letter after ., ?, and !
+
+Improving overall sentence readability
+
+2️⃣ Strings – Paragraph Analyzer
+
+Implemented a program to analyze a paragraph of text with the following functionalities:
+
+Count the total number of words
+
+Find and display the longest word
+
+Replace occurrences of a specific word with another (case-insensitive)
+
+Handle edge cases such as:
+
+Empty strings
+
+Paragraphs containing only spaces
+
+3️⃣ Arrays – Temperature Analyzer
+
+Worked on analyzing a week’s worth of temperature data stored in a 2D array (float[7][24]), implementing methods to:
+
+Determine the hottest day and coldest day
+
+Calculate and return the average temperature for each day
+
+4️⃣ Arrays – Student Test Score Manager
+
+Developed a program to manage student test scores using arrays, which:
+
+Stored scores for n students
+
+Calculated and displayed the average score
+
+Identified the highest and lowest scores
+
+Displayed scores above the average
+
+Handled invalid inputs such as:
+
+Negative scores
+
+Non-numeric input
+
+🧩 Coding Practice
+
+Solved multiple scenario-based problems using Strings and Arrays
+
+Focused on real-world logic, clean implementation, and edge-case handling
+
+Verified correctness of outputs before committing
+
+🔄 Version Control
+
+Committed all scenario-based solutions with meaningful commit messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 10 Completed Successfully
