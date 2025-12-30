@@ -50,58 +50,19 @@ class Library
 
     static void Main()
     {
-        // 3D Array: [10 books, 3 fields, 1 value]
-        string[,] books = new string[10, 3];
-
-        // Book 1
-        books[0, 0] = "Atomic Habits";
-        books[0, 1] = "James Clear";
-        books[0, 2] = "true";
-
-        // Book 2
-        books[1, 0] = "1984";
-        books[1, 1] = "George Orwell";
-        books[1, 2] = "false";
-
-        // Book 3
-        books[2, 0] = "The Alchemist";
-        books[2, 1] = "Paulo Coelho";
-        books[2, 2] = "true";
-
-        // Book 4
-        books[3, 0] = "Rich Dad Poor Dad";
-        books[3, 1] = "Robert Kiyosaki";
-        books[3, 2] = "false";
-
-        // Book 5
-        books[4, 0] = "Think and Grow Rich";
-        books[4, 1] = "Napoleon Hill";
-        books[4, 2] = "true";
-
-        // Book 6
-        books[5, 0] = "Clean Code";
-        books[5, 1] = "Robert C. Martin";
-        books[5, 2] = "false";
-
-        // Book 7
-        books[6, 0] = "The Hobbit";
-        books[6, 1] = "J.R.R. Tolkien";
-        books[6, 2] = "true";
-
-        // Book 8
-        books[7, 0] = "The Psychology of Money";
-        books[7, 1] = "Morgan Housel";
-        books[7, 2] = "false";
-
-        // Book 9
-        books[8, 0] = "Harry Potter";
-        books[8, 1] = "J.K. Rowling";
-        books[8, 2] = "true";
-
-        // Book 10
-        books[9, 0] = "Ikigai";
-        books[9, 1] = "Hector Garcia";
-        books[9, 2] = "false";
+        string[,] books =
+{
+    { "Atomic Habits", "James Clear", "true" },
+    { "1984", "George Orwell", "false" },
+    { "The Alchemist", "Paulo Coelho", "true" },
+    { "Rich Dad Poor Dad", "Robert Kiyosaki", "false" },
+    { "Think and Grow Rich", "Napoleon Hill", "true" },
+    { "Clean Code", "Robert C. Martin", "false" },
+    { "The Hobbit", "J.R.R. Tolkien", "true" },
+    { "The Psychology of Money", "Morgan Housel", "false" },
+    { "Harry Potter", "J.K. Rowling", "true" },
+    { "Ikigai", "Hector Garcia", "false" }
+};
 
         Console.WriteLine("SELECT YOUR ROLE:-");
         Console.WriteLine("1- ADMIN");
