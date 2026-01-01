@@ -413,3 +413,60 @@ Committed all scenario-based solutions with meaningful commit messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 10 Completed Successfully
+
+---
+
+📅 Day 11 – OOP Concepts, Constructors & Instances in C#
+
+Date: 30 December 2025
+
+🏁 Overview
+
+Day 11 focused on understanding Object-Oriented Programming (OOP) concepts in C#, with emphasis on constructors, objects (instances), and applying these concepts through real-world scenario-based problems.
+
+🔹 Concepts Covered
+
+Fundamentals of Object-Oriented Programming
+
+Classes and objects (instances)
+
+Constructors and their role in object initialization
+
+Interaction between objects and methods
+
+🔹 Scenario-Based Implementations
+1️⃣ Quiz Application
+
+Designed a console-based quiz application using OOP principles, focusing on:
+
+Creating classes to represent quizzes and questions
+
+Using constructors to initialize quiz data
+
+Managing user interaction and score calculation
+
+2️⃣ Library Management System
+
+Implemented a basic library management system to:
+
+Manage books and user data using classes
+
+Initialize objects through constructors
+
+Perform operations such as adding, issuing, and returning books
+
+🧩 Coding Practice
+
+Solved 2 scenario-based OOP problems
+
+Focused on proper class design and object usage
+
+Ensured correct functionality before committing
+
+🔄 Version Control
+
+Committed all OOP-based solutions with clear, descriptive commit messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 11 Completed Successfully
