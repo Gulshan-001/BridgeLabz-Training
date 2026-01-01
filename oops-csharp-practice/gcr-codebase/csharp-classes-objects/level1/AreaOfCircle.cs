@@ -33,7 +33,7 @@ class Program
         double radius = Convert.ToDouble(Console.ReadLine());
 
         // Creating object and passing radius
-        Circle circle = new Circle(radius);
+        AreaOfCircle circle = new AreaOfCircle(radius);
 
         circle.CalculateArea();
         circle.CalculateCircumference();
