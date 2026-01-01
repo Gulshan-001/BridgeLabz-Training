@@ -470,3 +470,70 @@ Committed all OOP-based solutions with clear, descriptive commit messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 11 Completed Successfully
+
+---
+
+📅 Day 12 – Advanced OOP Concepts & Class Design in C#
+
+Date: 31 December 2025
+
+🏁 Overview
+
+Day 12 focused on gaining a deeper understanding of Object-Oriented Programming (OOP) concepts in C#, with emphasis on class design, modularization, and real-world use cases.
+
+🔹 Concepts Covered
+
+In-depth OOP principles and best practices
+
+Designing reusable and modular classes
+
+Handling user input within class-based programs
+
+Applying OOP concepts to real-world scenarios
+
+🔹 Scenario-Based Implementations
+1️⃣ Mathematical Operations Class
+
+Built a class to perform various mathematical operations, focusing on:
+
+Method-based operations within a class
+
+Using class instances to execute calculations
+
+Clean separation of logic and execution
+
+2️⃣ Invoice Generation System
+
+Developed a class-based invoice generator that:
+
+Accepted string-based inputs from the user
+
+Processed and formatted invoice details
+
+Demonstrated practical use of OOP for business logic
+
+3️⃣ Bank Management System Prototype
+
+Built a modular bank management system prototype to:
+
+Represent accounts and transactions using classes
+
+Apply constructors and object interaction
+
+Simulate basic banking operations in a structured manner
+
+🧩 Coding Practice
+
+Solved multiple OOP-based problems
+
+Emphasized modular design and clarity
+
+Verified correct execution before committing
+
+🔄 Version Control
+
+Committed all OOP-related implementations with meaningful commit messages
+
+Successfully pushed all updates to the GitHub repository
+
+✅ Day 12 Completed Successfully
