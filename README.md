@@ -537,3 +537,48 @@ Committed all OOP-related implementations with meaningful commit messages
 Successfully pushed all updates to the GitHub repository
 
 ✅ Day 12 Completed Successfully
+
+---
+
+📅 Day 13 – Advanced OOP: Static, This, and School Cafeteria Module
+
+Date: 1 January 2026
+
+🏁 Overview
+
+Day 13 focused on deepening knowledge of C# OOP concepts, specifically this keyword, static members, and applying these principles through a practical school cafeteria module.
+
+🔹 Concepts Covered
+
+this keyword and its usage in constructors and methods
+
+static fields, methods, and their behavior
+
+Best practices for mixing instance and static members
+
+Applying OOP concepts to simulate real-world systems
+
+🔹 Scenario-Based Implementation
+School Cafeteria Module
+
+Built a cafeteria management module with 10 items listed
+
+Allowed user to choose items and calculate total
+
+Designed using classes, methods, and object instances
+
+Incorporated static members for common operations
+
+🧩 Coding Practice
+
+Solved 6 questions focused on this, static, and OOP applications
+
+Ensured correct program flow and output validation
+
+🔄 Version Control
+
+Committed all solutions with meaningful commit messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 13 Completed Successfully
