@@ -1,10 +1,10 @@
 using System;
 
-public class UserInterface
+public class UI
 {
     private AccountDatabase accountData;
 
-    public UserInterface(AccountDatabase data)
+    public UI(AccountDatabase data)
     {
         // keeping a reference so UI can read/write accounts
         accountData = data;

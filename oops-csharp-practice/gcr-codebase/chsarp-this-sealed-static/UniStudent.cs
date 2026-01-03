@@ -10,7 +10,7 @@ class UniStudent
     public string Name;
     public readonly int RollNumber;
     public string Grade;
-
+    
     public UniStudent(string name, int rollNumber, string grade)
     {
         // Using this to assign constructor values
