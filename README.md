@@ -582,3 +582,64 @@ Committed all solutions with meaningful commit messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 13 Completed Successfully
+
+---
+
+📅 Day 14 – Object-Oriented Design & Object Modelling
+
+Date: 2 January 2026
+
+🏁 Overview
+
+Day 14 focused on Object-Oriented Designing (OOD) and Object Modelling, translating real-world problems into structured diagrams and code for better system understanding.
+
+🔹 Concepts Covered
+
+Principles of Object-Oriented Design (OOD)
+
+Object Modelling and representation
+
+Design of UML diagrams:
+
+Class Diagram
+
+Object Diagram
+
+Sequence Diagram
+
+Applying design concepts to real-world scenarios
+
+🔹 Scenario-Based Implementations
+1️⃣ Grocery Bill Generation Application
+
+Designed class, object, and sequence diagrams
+
+Structured the problem using OOD principles
+
+Defined classes, attributes, and methods for billing and checkout process
+
+2️⃣ School Results Application
+
+Created all three UML diagrams for system modelling
+
+Implemented 8 object modelling programs based on the design
+
+Focused on representing students, subjects, and results as objects
+
+Ensured proper interaction between objects and methods
+
+🧩 Coding Practice
+
+Solved 8 programs related to object modelling
+
+Emphasized correct object interaction, OOD mapping, and code consistency
+
+Verified all outputs for accuracy and logical correctness
+
+🔄 Version Control
+
+Committed all design diagrams and object modelling code with descriptive messages
+
+Successfully pushed all work to the GitHub repository
+
+✅ Day 14 Completed Successfully
