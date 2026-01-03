@@ -643,3 +643,56 @@ Committed all design diagrams and object modelling code with descriptive message
 Successfully pushed all work to the GitHub repository
 
 ✅ Day 14 Completed Successfully
+
+---
+
+📅 Day 15 – Inheritance, Encapsulation & Scenario-Based OOP
+
+Date: 3 January 2026
+
+🏁 Overview
+
+Day 15 focused on deepening Object-Oriented Programming knowledge, with detailed study of inheritance and encapsulation, and applying these concepts through scenario-based implementations.
+
+🔹 Concepts Covered
+
+Inheritance and its types
+
+Encapsulation and data hiding
+
+Access modifiers and their role in OOP design
+
+Designing class hierarchies for code reusability and maintainability
+
+🔹 Scenario-Based Implementations
+1️⃣ Festival Lucky Draw System
+
+Designed a system using OOP concepts to simulate a festival lucky draw
+
+Applied inheritance to manage different participant types
+
+Used encapsulation to protect and manage user data
+
+2️⃣ Bus Route Distance Tracker
+
+Built a program to track distances between bus routes
+
+Used class hierarchies to represent routes and stops
+
+Applied encapsulation for controlled data access and updates
+
+🧩 Coding Practice
+
+Solved 11 practice questions focused on Inheritance
+
+Reinforced understanding through hands-on problem solving
+
+Ensured all programs produced correct and expected output
+
+🔄 Version Control
+
+Committed all OOP-based solutions with clear and descriptive messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 15 Completed Successfully
