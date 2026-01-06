@@ -696,3 +696,60 @@ Committed all OOP-based solutions with clear and descriptive messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 15 Completed Successfully
+
+---
+
+📅 Day 16 – Polymorphism, Abstraction & Interfaces in C#
+
+Date: 5 January 2026
+
+🏁 Overview
+
+Day 16 focused on mastering advanced Object-Oriented Programming concepts, with deep coverage of polymorphism and abstraction, and applying all OOP principles together in real-world applications.
+
+🔹 Concepts Covered
+
+Polymorphism (method overriding and runtime behavior)
+
+Abstraction using abstract classes and interfaces
+
+Role of interfaces in enforcing contracts
+
+Integrating encapsulation, inheritance, abstraction, and polymorphism cohesively
+
+🔹 Scenario-Based Implementations
+1️⃣ Hospital Patient Management System
+
+Designed a system using interfaces and abstract classes
+
+Applied polymorphism to manage different patient types
+
+Used encapsulation to protect sensitive patient data
+
+Ensured clean separation between abstraction and implementation
+
+2️⃣ Vehicle Rental Application
+
+Built a rental system utilizing abstraction and interfaces
+
+Implemented polymorphic behavior for different vehicle types
+
+Applied inheritance and encapsulation for maintainable design
+
+Simulated real-world rental operations using OOP principles
+
+🧩 Coding Practice
+
+Solved multiple scenario-based OOP problems
+
+Focused on clean architecture and extensibility
+
+Verified all outputs and behaviors before committing
+
+🔄 Version Control
+
+Committed all implementations with meaningful commit messages
+
+Successfully pushed all work to the GitHub repository
+
+✅ Day 16 Completed Successfully
