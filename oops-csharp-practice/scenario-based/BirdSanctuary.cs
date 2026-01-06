@@ -93,7 +93,7 @@ class Program
             new Seagull("White Seagull")
         };
 
-        Console.WriteLine("🦜 EcoWing Bird Sanctuary Activities 🦜\n");
+        Console.WriteLine(" EcoWing Bird Sanctuary Activities ");
 
         foreach (Bird bird in birds)
         {
