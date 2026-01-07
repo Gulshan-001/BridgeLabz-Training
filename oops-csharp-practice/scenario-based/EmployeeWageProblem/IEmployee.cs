@@ -8,5 +8,9 @@ namespace EmployeeWageProblem
 
         // NEW FEATURE (version2)
         void CalculateDailyWage();
+
+        //Version3
+        void SetPartTimeEmployee();
+
     }
 }

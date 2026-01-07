@@ -18,9 +18,10 @@ namespace EmployeeWageProblem
             {
                 Console.WriteLine("1. Add Employee");
                 Console.WriteLine("2. Check Attendance");
-                Console.WriteLine("3. Calculate Daily Wage");
-                Console.WriteLine("4. Exit");
-                Console.Write("Choice: ");
+                Console.WriteLine("3. Mark Employee as Part-Time");
+                Console.WriteLine("4. Calculate Daily Wage");
+                Console.WriteLine("5. Exit");
+                Console.Write("Enter your choice: ");
 
                 int choice = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
@@ -34,9 +35,12 @@ namespace EmployeeWageProblem
                         employeeUtility.CheckEmployeeAttendance();
                         break;
                     case 3:
-                        employeeUtility.CalculateDailyWage();
+                        employeeUtility.SetPartTimeEmployee();
                         break;
                     case 4:
+                        employeeUtility.CalculateDailyWage();
+                        break;
+                    case 5:
                         return;
 
                     default:

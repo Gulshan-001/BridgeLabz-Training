@@ -8,6 +8,9 @@ namespace EmployeeWageProblem
         public int Id { get; set; }
         public string Name { get; set; }
         public bool IsPresent { get; set; }
+        //V3
+        public bool IsPartTime { get; set; }
+
 
         // NEW: stores calculated daily wage
         public int DailyWage { get; set; }
@@ -18,6 +21,7 @@ namespace EmployeeWageProblem
             Name = name;
             IsPresent = false;
             DailyWage = 0;
+            IsPartTime = false;
         }
     }
 }
