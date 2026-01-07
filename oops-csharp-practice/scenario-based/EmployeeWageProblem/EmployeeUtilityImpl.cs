@@ -70,7 +70,8 @@ namespace EmployeeWageProblem
 
             Console.WriteLine("Employee not found\n");
         }
-//------------------------------VERSION 2   -----------------------------       
+
+//---------------------------VERSION 4 CALCULATE DAILY WAGE USING SWITCH CASE----------------
         public void CalculateDailyWage()
         {
             if (employees.Count == 0)
@@ -81,16 +82,28 @@ namespace EmployeeWageProblem
 
             foreach (Employee emp in employees)
             {
-                if (emp.IsPresent)
-                {
-                    if (emp.IsPartTime)
-                        emp.DailyWage = WAGE_PER_HOUR * PART_TIME_HOURS;
-                    else
-                        emp.DailyWage = WAGE_PER_HOUR * FULL_DAY_HOURS;
-                }
+                int workType;
+
+                if (!emp.IsPresent)
+                    workType = 0;
+                else if (emp.IsPartTime)
+                    workType = 2;
                 else
+                    workType = 1;
+
+                switch (workType)
                 {
-                    emp.DailyWage = 0;
+                    case 1: // Full-Time
+                        emp.DailyWage = WAGE_PER_HOUR * FULL_DAY_HOURS;
+                        break;
+
+                    case 2: // Part-Time
+                        emp.DailyWage = WAGE_PER_HOUR * PART_TIME_HOURS;
+                        break;
+
+                    default: // Absent
+                        emp.DailyWage = 0;
+                        break;
                 }
 
                 Console.WriteLine(
