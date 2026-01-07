@@ -753,3 +753,34 @@ Committed all implementations with meaningful commit messages
 Successfully pushed all work to the GitHub repository
 
 ✅ Day 16 Completed Successfully
+
+---
+
+📅 Day 17 – Advanced OOP Practice with Arrays & Interfaces
+
+Date: 6 January 2026
+
+🏁 Overview
+
+Day 17 focused on applying advanced OOP concepts through compact, real-world systems using arrays, interfaces, and polymorphism.
+
+🔹 Scenario-Based Implementations
+1️⃣ Customer Service Call Log Manager
+
+Built a call log system storing logs in an array of objects with phone number, message, and timestamp. Implemented keyword search using string.Contains and time-based filtering methods.
+
+2️⃣ Bird Sanctuary Management System
+
+Designed a bird tracking system using inheritance and polymorphism, implementing IFlyable and ISwimmable interfaces. Used arrays and runtime type checks to invoke correct behaviors.
+
+🧩 Coding Practice
+
+Solved 8 practice questions focused on in-depth application of OOP concepts
+
+🔄 Version Control
+
+Committed all implementations with clear messages
+
+Successfully pushed all work to the GitHub repository
+
+✅ Day 17 Completed Successfully
