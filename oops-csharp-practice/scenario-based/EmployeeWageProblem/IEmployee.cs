@@ -12,5 +12,9 @@ namespace EmployeeWageProblem
         //Version3
         void SetPartTimeEmployee();
 
+        //Version5
+        void CalculateMonthlyWage();
+
+
     }
 }

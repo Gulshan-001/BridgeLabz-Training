@@ -12,6 +12,8 @@ namespace EmployeeWageProblem
         private const int WAGE_PER_HOUR = 20;
         private const int FULL_DAY_HOURS = 8;
         private const int PART_TIME_HOURS = 8;
+        private const int WORKING_DAYS_PER_MONTH = 20;
+
 
         public void AddEmployee()
         {
@@ -108,6 +110,27 @@ namespace EmployeeWageProblem
 
                 Console.WriteLine(
                     emp.Name + " => Daily Wage: ₹" + emp.DailyWage
+                );
+            }
+
+            Console.WriteLine();
+        }
+
+//---------------------------VERSION 5 CALCULATE MONTHLY WAGE----------------
+        public void CalculateMonthlyWage()
+        {
+            if (employees.Count == 0)
+            {
+                Console.WriteLine("No employees found\n");
+                return;
+            }
+
+            foreach (Employee emp in employees)
+            {
+                emp.MonthlyWage = emp.DailyWage * WORKING_DAYS_PER_MONTH;
+
+                Console.WriteLine(
+                    emp.Name + " => Monthly Wage: ₹" + emp.MonthlyWage
                 );
             }
 

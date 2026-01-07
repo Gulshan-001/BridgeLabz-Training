@@ -20,7 +20,8 @@ namespace EmployeeWageProblem
                 Console.WriteLine("2. Check Attendance");
                 Console.WriteLine("3. Mark Employee as Part-Time");
                 Console.WriteLine("4. Calculate Daily Wage");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("5. Calculate Monthly Wage");
+                Console.WriteLine("6. Exit");
                 Console.Write("Enter your choice: ");
 
                 int choice = Convert.ToInt32(Console.ReadLine());
@@ -41,7 +42,11 @@ namespace EmployeeWageProblem
                         employeeUtility.CalculateDailyWage();
                         break;
                     case 5:
+                        employeeUtility.CalculateMonthlyWage();
+                        break;
+                    case 6:
                         return;
+
 
                     default:
                         Console.WriteLine("Invalid choice\n");

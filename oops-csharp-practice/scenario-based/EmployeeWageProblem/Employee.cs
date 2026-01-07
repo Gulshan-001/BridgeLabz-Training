@@ -11,6 +11,9 @@ namespace EmployeeWageProblem
         //V3
         public bool IsPartTime { get; set; }
 
+        //V5
+        public int MonthlyWage { get; set; }
+
 
         // NEW: stores calculated daily wage
         public int DailyWage { get; set; }
@@ -22,6 +25,8 @@ namespace EmployeeWageProblem
             IsPresent = false;
             DailyWage = 0;
             IsPartTime = false;
+            MonthlyWage = 0;
+
         }
     }
 }
