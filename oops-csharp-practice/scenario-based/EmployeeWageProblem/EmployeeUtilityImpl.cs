@@ -13,6 +13,9 @@ namespace EmployeeWageProblem
         private const int FULL_DAY_HOURS = 8;
         private const int PART_TIME_HOURS = 8;
         private const int WORKING_DAYS_PER_MONTH = 20;
+        private const int MAX_WORKING_DAYS = 20;
+        private const int MAX_WORKING_HOURS = 100;
+
 
 
         public void AddEmployee()
@@ -136,5 +139,60 @@ namespace EmployeeWageProblem
 
             Console.WriteLine();
         }
+
+//---------------------------VERSION 6 CALCULATE MONTHLY WAGE WITH CONDITIONS----------------
+public void CalculateMonthlyWageWithCondition()
+{
+    if (employees.Count == 0)
+    {
+        Console.WriteLine("No employees found\n");
+        return;
+    }
+
+    foreach (Employee emp in employees)
+    {
+        int totalDays = 0;
+        int totalHours = 0;
+        int totalWage = 0;
+
+        // keep calculating until any condition fails
+        while (totalDays < MAX_WORKING_DAYS && totalHours < MAX_WORKING_HOURS)
+        {
+            int workType = random.Next(0, 3); // 0-Absent, 1-Full, 2-Part
+            int hoursWorked = 0;
+
+            switch (workType)
+            {
+                case 1: // Full-time
+                    hoursWorked = FULL_DAY_HOURS;
+                    break;
+
+                case 2: // Part-time
+                    hoursWorked = PART_TIME_HOURS;
+                    break;
+
+                default: // Absent
+                    hoursWorked = 0;
+                    break;
+            }
+
+            totalHours += hoursWorked;
+            totalDays++;
+
+            totalWage += hoursWorked * WAGE_PER_HOUR;
+        }
+
+        emp.MonthlyWage = totalWage;
+
+        Console.WriteLine(
+            emp.Name +
+            " => Monthly Wage (with condition): ₹" + emp.MonthlyWage +
+            " | Days: " + totalDays +
+            " | Hours: " + totalHours
+        );
+    }
+
+    Console.WriteLine();
+} 
     }
 }

@@ -15,6 +15,10 @@ namespace EmployeeWageProblem
         //Version5
         void CalculateMonthlyWage();
 
+        //Version6
+        void CalculateMonthlyWageWithCondition();
+
+
 
     }
 }
