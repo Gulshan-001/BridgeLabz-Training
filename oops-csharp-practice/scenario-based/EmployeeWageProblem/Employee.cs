@@ -5,15 +5,19 @@ namespace EmployeeWageProblem
     // Holds basic employee info
     public class Employee
     {
-        public int Id { get; set; }        // employee id
-        public string Name { get; set; }   // employee name
-        public bool IsPresent { get; set; }// attendance status
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public bool IsPresent { get; set; }
+
+        // NEW: stores calculated daily wage
+        public int DailyWage { get; set; }
 
         public Employee(int id, string name)
         {
             Id = id;
             Name = name;
-            IsPresent = false; // default = absent
+            IsPresent = false;
+            DailyWage = 0;
         }
     }
 }

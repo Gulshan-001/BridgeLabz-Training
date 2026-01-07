@@ -9,6 +9,10 @@ namespace EmployeeWageProblem
         private List<Employee> employees = new List<Employee>();
         private Random random = new Random();
 
+        // Wage constants (easy to change later)
+        private const int WAGE_PER_HOUR = 20;
+        private const int FULL_DAY_HOURS = 8;
+
         public void AddEmployee()
         {
             Console.Write("Enter Employee ID: ");
@@ -39,5 +43,32 @@ namespace EmployeeWageProblem
             }
             Console.WriteLine();
         }
+//----------------------------VERSION 2: Calculate and display daily wage for all employees---------------------------------------
+
+        public void CalculateDailyWage()
+{
+    if (employees.Count == 0)
+    {
+        Console.WriteLine("No employees found\n");
+        return;
+    }
+
+    foreach (Employee emp in employees)
+    {
+        if (emp.IsPresent)
+        {
+            emp.DailyWage = WAGE_PER_HOUR * FULL_DAY_HOURS;
+        }
+        else
+        {
+            emp.DailyWage = 0;
+        }
+
+        Console.WriteLine(emp.Name + " => Daily Wage: " + emp.DailyWage);
+    }
+
+    Console.WriteLine();
+}
+
     }
 }
