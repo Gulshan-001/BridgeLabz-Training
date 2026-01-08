@@ -784,3 +784,34 @@ Committed all implementations with clear messages
 Successfully pushed all work to the GitHub repository
 
 ✅ Day 17 Completed Successfully
+
+---
+
+📅 Day 18 – Linked Lists & OOP Application
+
+Date: 7 January 2026
+
+🏁 Overview
+
+Day 18 focused on understanding all types of linked lists in depth and applying OOP concepts to build a practical management system.
+
+🔹 Concepts Covered
+
+Singly, Doubly, and Circular Linked Lists
+
+Node structure, traversal, insertion, and deletion
+
+Comparing linked lists with arrays
+
+🔹 Scenario-Based Implementation
+Employee Wage Management System
+
+Built an employee wage management system using OOP principles, handling employee details and wage calculations with clean class design and encapsulation.
+
+🔄 Version Control
+
+Committed all implementations with clear messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 18 Completed Successfully
