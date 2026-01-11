@@ -815,3 +815,36 @@ Committed all implementations with clear messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 18 Completed Successfully
+
+---
+
+📅 Day 19 – Interfaces, Linked Lists & System Design
+
+Date: 8 January 2026
+
+🏁 Overview
+
+Day 19 focused on applying interfaces and encapsulation in a real-world system and reinforcing knowledge of linked list data structures through practice.
+
+🔹 Scenario-Based Implementation
+Smart Home Automation System
+
+Built a smart home automation system using interfaces and their implementations, applying encapsulation to control and manage different appliances.
+
+🔹 Linked List Practice
+
+Practiced problems based on all types of linked lists:
+
+Singly Linked List
+
+Doubly Linked List
+
+Circular Linked List
+
+🔄 Version Control
+
+Committed all implementations and practice code with clear messages
+
+Successfully pushed all work to the GitHub repository
+
+✅ Day 19 Completed Successfully
