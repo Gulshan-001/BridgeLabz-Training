@@ -848,3 +848,42 @@ Committed all implementations and practice code with clear messages
 Successfully pushed all work to the GitHub repository
 
 ✅ Day 19 Completed Successfully
+
+---
+
+📅 Day 20 – DSA Fundamentals & OOP Systems
+
+Date: 9 January 2026
+
+🏁 Overview
+
+Day 20 focused on learning core Data Structures and Algorithms (DSA) concepts and applying OOP principles through practical system implementations.
+
+🔹 Concepts Covered
+
+Stack
+
+Queues (Linear, Circular, Priority, Deque)
+
+HashMap and hashing functions
+
+🧩 Coding Practice
+
+Solved and submitted 10 important DSA questions
+
+🔹 Scenario-Based Implementations
+ATM Dispenser System
+
+Built an ATM dispenser system using OOP concepts, handling cash dispensing logic and user interactions.
+
+Fitness Tracker System
+
+Developed a fitness tracker application applying OOP principles to manage user activity and health data.
+
+🔄 Version Control
+
+Committed all implementations and practice code with meaningful messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 20 Completed Successfully
