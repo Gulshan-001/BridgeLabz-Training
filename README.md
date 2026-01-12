@@ -887,3 +887,45 @@ Committed all implementations and practice code with meaningful messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 20 Completed Successfully
+
+---
+
+📅 Day 21 – Sorting Algorithms in DSA
+
+Date: 11 January 2026
+
+🏁 Overview
+
+Day 21 focused on learning all major sorting algorithms, implementing them in code, and applying them to practice problems.
+
+🔹 Concepts Covered
+
+Bubble Sort
+
+Selection Sort
+
+Insertion Sort
+
+Merge Sort
+
+Quick Sort
+
+Heap Sort
+
+Counting Sort
+
+🧩 Coding Practice
+
+Solved 7 additional questions implementing the above sorting algorithms
+
+Verified correctness and efficiency of all implementations
+
+🔄 Version Control
+
+Committed all code with clear messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 21 Completed Successfully
+
+---
