@@ -929,3 +929,43 @@ Successfully pushed the complete work to the GitHub repository
 ✅ Day 21 Completed Successfully
 
 ---
+📅 Day 22 – OOP Systems & DSA Practice
+
+Date: 12 January 2026
+
+🏁 Overview
+
+Day 22 focused on building real-world OOP systems and practicing key DSA concepts including searches and string manipulations.
+
+🔹 Concepts Covered
+
+StringBuilder and StringBuffer
+
+Linear Search
+
+Binary Search
+
+🔹 Scenario-Based Implementations
+1️⃣ Metal Factory Pipe Cutting
+
+Built a system using OOP to maximize revenue from cutting pipes, applying logic to determine optimal cuts.
+
+2️⃣ Custom Furniture Manufacturing
+
+Designed an OOP-based system to maximize revenue and minimize waste when cutting furniture pieces based on orders.
+
+3️⃣ LoanBuddy Application
+
+Implemented a loan approval system using OOP, applying various constraints and eligibility checks to approve or reject loan requests.
+
+🧩 Coding Practice
+
+Solved 15 practice questions reinforcing string operations and search algorithms
+
+🔄 Version Control
+
+Committed all systems and practice code with meaningful messages
+
+Successfully pushed all work to the GitHub repository
+
+✅ Day 22 Completed Successfully
