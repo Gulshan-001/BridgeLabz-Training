@@ -969,3 +969,41 @@ Committed all systems and practice code with meaningful messages
 Successfully pushed all work to the GitHub repository
 
 ✅ Day 22 Completed Successfully
+
+---
+📅 Day 23 – Algorithm Analysis & OOP Applications
+
+Date: 13 January 2026
+
+🏁 Overview
+
+Day 23 focused on analyzing algorithm performance and applying OOP concepts through practical system implementations.
+
+🔹 Concepts Covered
+
+Algorithm runtime analysis
+
+Big-O Notation
+
+Comparing algorithm execution time using System.Diagnostics
+
+🔹 Scenario-Based Implementations
+1️⃣ BookBuddy – Digital Bookshelf App
+
+Built a digital bookshelf application using OOP to manage books, authors, and user interactions.
+
+2️⃣ CinemaTime – Movie Schedule Manager
+
+Developed a movie scheduling system using OOP to manage show timings and movie listings.
+
+🧩 Coding Practice
+
+Solved 5 program-based questions comparing time complexity of different algorithms
+
+🔄 Version Control
+
+Committed all implementations and analysis programs with clear messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 23 Completed Successfully
