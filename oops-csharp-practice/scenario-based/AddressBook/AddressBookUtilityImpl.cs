@@ -142,7 +142,7 @@ public class AddressBookUtilityImpl : IAddressBook
             Console.WriteLine("Contact not found!");
         }
     }
- // UC5: Add multiple contacts one by one
+    // UC5: Add multiple contacts one by one
     public void AddMultipleContacts()
     {
         char choice;
@@ -155,5 +155,33 @@ public class AddressBookUtilityImpl : IAddressBook
             choice = Convert.ToChar(Console.ReadLine().ToLower());
 
         } while (choice == 'y');
+    }
+    // UC6: Add new Address Book
+    public void AddAddressBook()
+    {
+        if (addressBookCount >= 10)
+        {
+            Console.WriteLine("Cannot add more Address Books.");
+            return;
+        }
+
+        Console.Write("Enter Address Book Name: ");
+        string name = Console.ReadLine();
+
+        // Check for unique name
+        for (int i = 0; i < addressBookCount; i++)
+        {
+            if (addressBooks[i].Name.Equals(name))
+            {
+                Console.WriteLine("Address Book with this name already exists!");
+                return;
+            }
+        }
+
+        AddressBook book = new AddressBook(name);
+        addressBooks[addressBookCount++] = book;
+        currentAddressBook = book;
+
+        Console.WriteLine($"Address Book '{name}' created and selected.");
     }
 }

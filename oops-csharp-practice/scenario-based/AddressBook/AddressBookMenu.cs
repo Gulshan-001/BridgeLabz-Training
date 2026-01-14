@@ -1,6 +1,5 @@
 using System;
 
-// Menu-driven class
 public class AddressBookMenu
 {
     private IAddressBook addressBook;
@@ -13,14 +12,14 @@ public class AddressBookMenu
     public void ShowMenu()
     {
         int choice;
-
         do
         {
-            Console.WriteLine("\n===== ADDRESS BOOK MENU =====");
-            Console.WriteLine("1. Add Contact");//UC2
-            Console.WriteLine("2. Edit Contact");//UC3
-            Console.WriteLine("3. Delete Contact");//UC4
-            Console.WriteLine("4. Add Multiple Contacts");//UC5
+            Console.WriteLine("\n===== ADDRESS BOOK SYSTEM =====");
+            Console.WriteLine("1. Create Address Book");
+            Console.WriteLine("2. Add Contact");
+            Console.WriteLine("3. Add Multiple Contacts");
+            Console.WriteLine("4. Edit Contact");
+            Console.WriteLine("5. Delete Contact");
             Console.WriteLine("0. Exit");
             Console.Write("Enter choice: ");
 
@@ -29,22 +28,23 @@ public class AddressBookMenu
             switch (choice)
             {
                 case 1:
+                    addressBook.AddAddressBook();
+                    break;
+                case 2:
                     addressBook.AddContact();
                     break;
-
-                case 2:
-                    addressBook.EditContact();
-                    break;
-
                 case 3:
-                    addressBook.DeleteContact();
+                    addressBook.AddMultipleContacts();
                     break;
                 case 4:
-                    addressBook.AddMultipleContacts();
-                case 0:
-                    Console.WriteLine("Exiting Address Book...");
+                    addressBook.EditContact();
                     break;
-
+                case 5:
+                    addressBook.DeleteContact();
+                    break;
+                case 0:
+                    Console.WriteLine("Exiting...");
+                    break;
                 default:
                     Console.WriteLine("Invalid choice!");
                     break;

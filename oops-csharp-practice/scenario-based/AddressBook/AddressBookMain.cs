@@ -1,9 +1,9 @@
 using System;
 
-// Starts Address Book menu
+// Application entry point
 public class AddressBookMain
 {
-    public void Start()
+    public static void Main(string[] args)
     {
         AddressBookMenu menu = new AddressBookMenu();
         menu.ShowMenu();

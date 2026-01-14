@@ -9,4 +9,7 @@ public interface IAddressBook
     void DeleteContact();  
     //UC5 : Add Multiple Contacts
     void AddMultipleContacts();
+    //UC6 : Add Multiple Address Books
+    void AddMultipleAddressBooks();
+    void SwitchAddressBook();     // UC6.1 Switch Between Address Books
 }
