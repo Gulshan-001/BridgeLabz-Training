@@ -106,4 +106,40 @@ public class AddressBookUtilityImpl : IAddressBook
             Console.WriteLine("X Contact not found!");
         }
     }
+    // UC4: Delete contact using First Name + Phone Number
+    public void DeleteContact()
+    {
+        Console.Write("\nEnter First Name of contact: ");
+        string firstName = Console.ReadLine();
+
+        Console.Write("Enter Phone Number of contact: ");
+        string phoneNumber = Console.ReadLine();
+
+        bool found = false;
+
+        for (int i = 0; i < contactCount; i++)
+        {
+            if (contacts[i].FirstName.Equals(firstName)
+                && contacts[i].PhoneNumber.Equals(phoneNumber))
+            {
+                // Shift elements to left to fill the gap
+                for (int j = i; j < contactCount - 1; j++)
+                {
+                    contacts[j] = contacts[j + 1];
+                }
+
+                contacts[contactCount - 1] = null;
+                contactCount--;
+
+                Console.WriteLine("Contact deleted successfully!");
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine("Contact not found!");
+        }
+    }
 }
