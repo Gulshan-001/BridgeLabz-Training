@@ -142,4 +142,18 @@ public class AddressBookUtilityImpl : IAddressBook
             Console.WriteLine("Contact not found!");
         }
     }
+ // UC5: Add multiple contacts one by one
+    public void AddMultipleContacts()
+    {
+        char choice;
+
+        do
+        {
+            AddContact(); // reuse UC2 logic
+
+            Console.Write("\nDo you want to add another contact? (y/n): ");
+            choice = Convert.ToChar(Console.ReadLine().ToLower());
+
+        } while (choice == 'y');
+    }
 }

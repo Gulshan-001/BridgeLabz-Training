@@ -7,4 +7,6 @@ public interface IAddressBook
     void EditContact();
     //UC4 : Delete existing contact
     void DeleteContact();  
+    //UC5 : Add Multiple Contacts
+    void AddMultipleContacts();
 }
