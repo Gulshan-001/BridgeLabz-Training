@@ -1,15 +1,21 @@
 // Interface for Address Book operations
 public interface IAddressBook
 {
-    // UC2: Add new contact
+    // UC2
     void AddContact();
-    //UC3 : Edit Existing Contact
+
+    // UC3
     void EditContact();
-    //UC4 : Delete existing contact
-    void DeleteContact();  
-    //UC5 : Add Multiple Contacts
+
+    // UC4
+    void DeleteContact();
+
+    // UC5
     void AddMultipleContacts();
-    //UC6 : Add Multiple Address Books
-    void AddMultipleAddressBooks();
-    void SwitchAddressBook();     // UC6.1 Switch Between Address Books
+
+    // UC6
+    void AddAddressBook();
+
+    // UC6.1
+    void SwitchAddressBook();
 }

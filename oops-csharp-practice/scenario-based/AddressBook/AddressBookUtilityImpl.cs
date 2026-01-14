@@ -3,10 +3,16 @@ using System;
 // Implements address book operations
 public class AddressBookUtilityImpl : IAddressBook
 {
+    // UC6: Multiple Address Books storage
+    private AddressBook[] addressBooks = new AddressBook[10];
+    private int addressBookCount = 0;
+    private AddressBook currentAddressBook = null;
+
+    // Existing single-address-book storage (kept as-is)
     private Address[] contacts = new Address[100];
     private int contactCount = 0;
 
-    // UC2: Add new contact
+    // UC2 + UC7: Add new contact with duplicate check
     public void AddContact()
     {
         if (contactCount >= 100)
@@ -17,6 +23,16 @@ public class AddressBookUtilityImpl : IAddressBook
 
         Console.Write("First Name: ");
         string firstName = Console.ReadLine();
+
+        // UC7: Duplicate check based on First Name
+        for (int i = 0; i < contactCount; i++)
+        {
+            if (contacts[i].FirstName.Equals(firstName))
+            {
+                Console.WriteLine("Duplicate entry! Contact with this name already exists.");
+                return;
+            }
+        }
 
         Console.Write("Last Name: ");
         string lastName = Console.ReadLine();
@@ -106,6 +122,7 @@ public class AddressBookUtilityImpl : IAddressBook
             Console.WriteLine("X Contact not found!");
         }
     }
+
     // UC4: Delete contact using First Name + Phone Number
     public void DeleteContact()
     {
@@ -142,6 +159,7 @@ public class AddressBookUtilityImpl : IAddressBook
             Console.WriteLine("Contact not found!");
         }
     }
+
     // UC5: Add multiple contacts one by one
     public void AddMultipleContacts()
     {
@@ -149,13 +167,14 @@ public class AddressBookUtilityImpl : IAddressBook
 
         do
         {
-            AddContact(); // reuse UC2 logic
+            AddContact(); // reuse UC2 logic (duplicate check applies)
 
             Console.Write("\nDo you want to add another contact? (y/n): ");
             choice = Convert.ToChar(Console.ReadLine().ToLower());
 
         } while (choice == 'y');
     }
+
     // UC6: Add new Address Book
     public void AddAddressBook()
     {
@@ -183,5 +202,36 @@ public class AddressBookUtilityImpl : IAddressBook
         currentAddressBook = book;
 
         Console.WriteLine($"Address Book '{name}' created and selected.");
+    }
+
+    // UC6.1: Switch current Address Book
+    public void SwitchAddressBook()
+    {
+        if (addressBookCount == 0)
+        {
+            Console.WriteLine("No Address Books available.");
+            return;
+        }
+
+        Console.WriteLine("\nAvailable Address Books:");
+        for (int i = 0; i < addressBookCount; i++)
+        {
+            Console.WriteLine("- " + addressBooks[i].Name);
+        }
+
+        Console.Write("\nEnter Address Book name to switch: ");
+        string name = Console.ReadLine();
+
+        for (int i = 0; i < addressBookCount; i++)
+        {
+            if (addressBooks[i].Name.Equals(name))
+            {
+                currentAddressBook = addressBooks[i];
+                Console.WriteLine($"Switched to Address Book: {name}");
+                return;
+            }
+        }
+
+        Console.WriteLine("Address Book not found.");
     }
 }
