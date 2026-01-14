@@ -3,4 +3,6 @@ public interface IAddressBook
 {
     // UC2: Add new contact
     void AddContact();
+    //UC3 : Edit Existing Contact
+    void EditContact();
 }

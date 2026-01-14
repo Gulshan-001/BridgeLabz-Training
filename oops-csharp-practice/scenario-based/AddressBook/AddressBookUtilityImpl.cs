@@ -49,4 +49,61 @@ public class AddressBookUtilityImpl : IAddressBook
 
         Console.WriteLine("Contact added successfully!");
     }
+
+    // UC3: Edit contact using First Name + Phone Number
+    public void EditContact()
+    {
+        Console.Write("\nEnter First Name of contact: ");
+        string firstName = Console.ReadLine();
+
+        Console.Write("Enter Phone Number of contact: ");
+        string phoneNumber = Console.ReadLine();
+
+        bool found = false;
+
+        for (int i = 0; i < contactCount; i++)
+        {
+            if (contacts[i].FirstName.Equals(firstName)
+                && contacts[i].PhoneNumber.Equals(phoneNumber))
+            {
+                Console.WriteLine("\nContact found. Enter new details:");
+
+                Console.Write("New Last Name: ");
+                string lastName = Console.ReadLine();
+
+                Console.Write("New Address: ");
+                string addressLine = Console.ReadLine();
+
+                Console.Write("New City: ");
+                string city = Console.ReadLine();
+
+                Console.Write("New State: ");
+                string state = Console.ReadLine();
+
+                Console.Write("New Zip: ");
+                string zip = Console.ReadLine();
+
+                Console.Write("New Phone Number: ");
+                string newPhone = Console.ReadLine();
+
+                Console.Write("New Email: ");
+                string email = Console.ReadLine();
+
+                // Replace old contact with updated one
+                contacts[i] = new Address(
+                    firstName, lastName, addressLine,
+                    city, state, zip, newPhone, email
+                );
+
+                Console.WriteLine("Contact updated successfully!");
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine("X Contact not found!");
+        }
+    }
 }
