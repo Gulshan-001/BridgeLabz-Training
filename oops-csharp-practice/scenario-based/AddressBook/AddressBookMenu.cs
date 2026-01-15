@@ -22,11 +22,27 @@ public class AddressBookMenu
             Console.WriteLine("0. Exit");
 
             int ch = Convert.ToInt32(Console.ReadLine());
-            if (ch == 0) break;
-            if (ch == 1) system.AddAddressBook();
-            if (ch == 2) system.SwitchAddressBook();
 
-            if (!system.IsAddressBookSelected()) continue;
+            switch (ch)
+            {
+                case 0:
+                    return;
+
+                case 1:
+                    system.AddAddressBook();
+                    break;
+
+                case 2:
+                    system.SwitchAddressBook();
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid choice!");
+                    break;
+            }
+
+            if (!system.IsAddressBookSelected())
+                continue;
 
             while (true)
             {
@@ -37,17 +53,51 @@ public class AddressBookMenu
                 Console.WriteLine("4. Delete Contact");
                 Console.WriteLine("5. Search by City/State");
                 Console.WriteLine("6. View by City/State");
+                Console.WriteLine("7. Count Persons by City or State");
                 Console.WriteLine("0. Back");
 
                 int op = Convert.ToInt32(Console.ReadLine());
-                if (op == 0) break;
 
-                if (op == 1) contacts.AddContact();
-                if (op == 2) contacts.AddMultipleContacts();
-                if (op == 3) contacts.EditContact();
-                if (op == 4) contacts.DeleteContact();
-                if (op == 5) contacts.SearchPersonByCityOrState();
-                if (op == 6) contacts.ViewPersonsByCityOrState();
+                switch (op)
+                {
+                    case 0:
+                        break;
+
+                    case 1:
+                        contacts.AddContact();
+                        break;
+
+                    case 2:
+                        contacts.AddMultipleContacts();
+                        break;
+
+                    case 3:
+                        contacts.EditContact();
+                        break;
+
+                    case 4:
+                        contacts.DeleteContact();
+                        break;
+
+                    case 5:
+                        contacts.SearchPersonByCityOrState();
+                        break;
+
+                    case 6:
+                        contacts.ViewPersonsByCityOrState();
+                        break;
+
+                    case 7:
+                        contacts.CountPersonsByCityOrState();
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid choice!");
+                        break;
+                }
+
+                if (op == 0)
+                    break;
             }
         }
     }

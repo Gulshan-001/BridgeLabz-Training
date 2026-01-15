@@ -15,8 +15,11 @@ public interface IAddressBook
 
     //UC8 Search Person by City or State across multiple Address Books
     void SearchPersonByCityOrState();
-    
+
     //UC9 View Persons by City or State across multiple Address Books
     void ViewPersonsByCityOrState();
+    // UC10 Count Persons by City or State across multiple Address Books
+    void CountPersonsByCityOrState();
+
 
 }

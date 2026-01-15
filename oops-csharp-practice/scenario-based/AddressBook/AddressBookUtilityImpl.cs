@@ -309,4 +309,42 @@ public void SearchPersonByCityOrState()
             }
         }
     }
+    // UC10: Count persons by City or State across all Address Books
+    public void CountPersonsByCityOrState()
+    {
+    if (addressBookCount == 0)
+    {
+        Console.WriteLine("No Address Books available.");
+        return;
+    }
+
+    Console.WriteLine("\nCount by:");
+    Console.WriteLine("1. City");
+    Console.WriteLine("2. State");
+    Console.Write("Enter choice: ");
+    int choice = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Enter City/State name: ");
+    string value = Console.ReadLine();
+
+    int count = 0;
+
+    for (int i = 0; i < addressBookCount; i++)
+    {
+        AddressBook book = addressBooks[i];
+
+        for (int j = 0; j < book.ContactCount; j++)
+        {
+            Address person = book.Contacts[j];
+
+            if ((choice == 1 && person.City.Equals(value)) ||
+                (choice == 2 && person.State.Equals(value)))
+            {
+                count++;
+            }
+        }
+    }
+
+    Console.WriteLine($"\nTotal persons in {value}: {count}");
+}
 }
