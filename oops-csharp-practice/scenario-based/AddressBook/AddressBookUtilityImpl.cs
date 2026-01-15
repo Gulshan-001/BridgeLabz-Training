@@ -1,7 +1,7 @@
 using System;
 
 // Implements address book operations
-public class AddressBookUtilityImpl : IAddressBook
+public class AddressBookUtilityImpl : IAddressBook, IAddressBookSystem
 {
     // UC6: Multiple Address Books storage
     private AddressBook[] addressBooks = new AddressBook[10];
@@ -234,4 +234,53 @@ public class AddressBookUtilityImpl : IAddressBook
 
         Console.WriteLine("Address Book not found.");
     }
+    // UC8: Search person by City or State across multiple Address Books
+public void SearchPersonByCityOrState()
+{
+    if (addressBookCount == 0)
+    {
+        Console.WriteLine("No Address Books available.");
+        return;
+    }
+
+    Console.WriteLine("\nSearch by:");
+    Console.WriteLine("1. City");
+    Console.WriteLine("2. State");
+    Console.Write("Enter choice: ");
+    int choice = Convert.ToInt32(Console.ReadLine());
+
+    Console.Write("Enter value to search: ");
+    string searchValue = Console.ReadLine();
+
+    bool found = false;
+
+    Console.WriteLine("\n--- Search Results ---");
+
+    for (int i = 0; i < addressBookCount; i++)
+    {
+        AddressBook book = addressBooks[i];
+
+        for (int j = 0; j < book.ContactCount; j++)
+        {
+            Address person = book.Contacts[j];
+
+            if ((choice == 1 && person.City.Equals(searchValue)) ||
+                (choice == 2 && person.State.Equals(searchValue)))
+            {
+                Console.WriteLine(
+                    $"[AddressBook: {book.Name}] " +
+                    $"{person.FirstName} {person.LastName}, " +
+                    $"{person.City}, {person.State}, {person.PhoneNumber}"
+                );
+
+                found = true;
+            }
+        }
+    }
+
+    if (!found)
+    {
+        Console.WriteLine("No persons found for given City/State.");
+    }
+}
 }
