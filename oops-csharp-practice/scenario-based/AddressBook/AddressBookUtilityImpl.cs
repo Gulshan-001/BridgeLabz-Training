@@ -296,4 +296,17 @@ public void SearchPersonByCityOrState()
         Console.WriteLine("No persons found for given City/State.");
     }
 }
+    // UC9: View persons by City or State across multiple Address Books
+    public void ViewPersonsByCityOrState()
+    {
+        for (int i = 0; i < addressBookCount; i++)
+        {
+            AddressBook b = addressBooks[i];
+            for (int j = 0; j < b.ContactCount; j++)
+            {
+                Address a = b.Contacts[j];
+                Console.WriteLine($"{a.City} - {a.FirstName} ({b.Name})");
+            }
+        }
+    }
 }
