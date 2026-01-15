@@ -234,6 +234,19 @@ public class AddressBookUtilityImpl : IAddressBook, IAddressBookSystem
 
         Console.WriteLine("Address Book not found.");
     }
+
+    // UC6.2: Check if an Address Book is selected
+    public bool IsAddressBookSelected()
+    {
+        return currentAddressBook != null;
+    }
+
+    // UC6.3: Get current Address Book name
+    public string GetCurrentAddressBookName()
+    {
+        return currentAddressBook.Name;
+    }
+
     // UC8: Search person by City or State across multiple Address Books
 public void SearchPersonByCityOrState()
 {
