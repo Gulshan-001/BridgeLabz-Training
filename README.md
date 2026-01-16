@@ -1052,3 +1052,48 @@ Committed all implemented features with meaningful messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 24 Completed Successfully
+
+---
+
+📅 Day 25 – Address Book System Enhancement & Refactoring
+
+Date: 15 January 2026
+
+🏁 Overview
+
+Day 25 focused on extending the Address Book System by implementing the remaining features and refactoring existing code to improve structure, readability, and scalability.
+
+🔹 System Enhancements
+Address Book Management System
+
+Added the remaining functionalities to complete the system:
+
+New Features Implemented:
+
+Count total contacts
+
+Sort contacts alphabetically by name
+
+🔧 Refactoring & Improvements
+
+Refactored existing code to support new features cleanly
+
+Improved method structure and separation of concerns
+
+Polished menu flow and overall code readability
+
+🧩 Learning Outcomes
+
+Enhancing an existing system without breaking functionality
+
+Importance of refactoring when scaling applications
+
+Writing cleaner, more maintainable OOP-based code
+
+🔄 Version Control
+
+Committed all new features and refactored code with clear messages
+
+Successfully pushed all updates to the GitHub repository
+
+✅ Day 25 Completed Successfully
