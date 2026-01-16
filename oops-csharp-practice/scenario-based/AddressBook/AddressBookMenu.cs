@@ -54,6 +54,7 @@ public class AddressBookMenu
                 Console.WriteLine("5. Search by City/State");
                 Console.WriteLine("6. View by City/State");
                 Console.WriteLine("7. Count Persons by City or State");
+                Console.WriteLine("8. Sort Contacts by Name");
                 Console.WriteLine("0. Back");
 
                 int op = Convert.ToInt32(Console.ReadLine());
@@ -90,7 +91,9 @@ public class AddressBookMenu
                     case 7:
                         contacts.CountPersonsByCityOrState();
                         break;
-
+                    case 8:
+                        contacts.SortContactsByName();
+                        break;
                     default:
                         Console.WriteLine("Invalid choice!");
                         break;

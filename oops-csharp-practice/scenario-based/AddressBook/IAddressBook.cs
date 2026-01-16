@@ -20,6 +20,6 @@ public interface IAddressBook
     void ViewPersonsByCityOrState();
     // UC10 Count Persons by City or State across multiple Address Books
     void CountPersonsByCityOrState();
-
-
+    //UC11 Sort Entries in Address Book by Name
+    void SortContactsByName();
 }

@@ -347,4 +347,47 @@ public void SearchPersonByCityOrState()
 
     Console.WriteLine($"\nTotal persons in {value}: {count}");
 }
+    // UC11: Sort contacts alphabetically by First Name
+    public void SortContactsByName()
+    {
+    if (currentAddressBook == null)
+    {
+        Console.WriteLine("No Address Book selected.");
+        return;
+    }
+
+    int n = currentAddressBook.ContactCount;
+
+    if (n == 0)
+    {
+        Console.WriteLine("No contacts to sort.");
+        return;
+    }
+
+    // Simple Bubble Sort (easy to understand)
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (string.Compare(
+                    currentAddressBook.Contacts[j].FirstName,
+                    currentAddressBook.Contacts[j + 1].FirstName) > 0)
+            {
+                // swap
+                Address temp = currentAddressBook.Contacts[j];
+                currentAddressBook.Contacts[j] = currentAddressBook.Contacts[j + 1];
+                currentAddressBook.Contacts[j + 1] = temp;
+            }
+        }
+    }
+
+    Console.WriteLine("\nContacts sorted alphabetically by name:\n");
+
+    // Display sorted contacts
+    for (int i = 0; i < n; i++)
+    {
+        Address a = currentAddressBook.Contacts[i];
+        Console.WriteLine($"{a.FirstName} {a.LastName} - {a.PhoneNumber}");
+    }
+}
 }
