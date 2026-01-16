@@ -1007,3 +1007,48 @@ Committed all implementations and analysis programs with clear messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 23 Completed Successfully
+
+---
+
+📅 Day 24 – Console-Based Address Book System
+
+Date: 14 January 2026
+
+🏁 Overview
+
+Day 24 focused on building a console-based Address Book System, applying OOP principles, menu-driven design, and structured feature implementation.
+
+🔹 System Implemented
+Address Book Management System
+
+Developed a menu-driven address book application that supports managing contacts efficiently.
+
+Features Implemented:
+
+Add contacts
+
+Edit contacts
+
+Delete contacts
+
+Search contacts
+
+View all contacts
+
+The system allows smooth user interaction through a structured console menu.
+
+🧩 Learning Outcomes
+
+Designing a larger console application from scratch
+
+Structuring features for clarity and maintainability
+
+Applying OOP concepts in a real-world management system
+
+🔄 Version Control
+
+Committed all implemented features with meaningful messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 24 Completed Successfully
