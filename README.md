@@ -1097,3 +1097,38 @@ Committed all new features and refactored code with clear messages
 Successfully pushed all updates to the GitHub repository
 
 ✅ Day 25 Completed Successfully
+
+---
+
+📅 Day 26 – Advanced DSA with OOP Integration
+
+Date: 16 January 2026
+
+🏁 Overview
+
+Day 26 focused on practicing advanced DSA concepts and integrating them with OOP design to build complex, real-world systems.
+
+🔹 Scenario-Based Implementations
+1️⃣ TrafficManager – Roundabout Vehicle Flow
+
+Built a smart traffic system where vehicles are managed using a Circular Linked List and a Queue for entry control. Implemented dynamic add/remove operations, handled queue overflow/underflow, and enabled real-time state display.
+
+2️⃣ BookShelf – Library Organizer
+
+Developed a library organization system using a HashMap (genre → LinkedList of books). Supported efficient insert/delete operations and maintained a genre-wise catalog, with optional duplicate prevention using HashSet.
+
+🧩 Learning Outcomes
+
+Combining DSA structures with OOP principles
+
+Designing scalable systems using LinkedList, Queue, and HashMap
+
+Handling dynamic data and real-time state updates
+
+🔄 Version Control
+
+Committed all modules and practice code with clear messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 26 Completed Successfully
