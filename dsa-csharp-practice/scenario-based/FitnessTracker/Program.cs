@@ -21,7 +21,7 @@ class Program
 
             fitness.AddRunner(new Runners(name, distance));
         }
-
+    
         // sort + display
         fitness.DisplayRankings();
     }
