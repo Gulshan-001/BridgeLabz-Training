@@ -1132,3 +1132,38 @@ Committed all modules and practice code with clear messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 26 Completed Successfully
+
+---
+
+📅 Day 27 – Sorting Algorithms & DSA-Based Systems
+
+Date: 17 January 2026
+
+🏁 Overview
+
+Day 27 focused on DSA sorting techniques, with special emphasis on Quick Sort and Bubble Sort, applied through practical system implementations.
+
+🔹 Scenario-Based Implementations
+1️⃣ FlashDealz – Product Sorting by Discount
+
+Built a product sorting system using Quick Sort to rank items based on discount values efficiently.
+
+2️⃣ FitnessTracker – Daily Step Count Ranking
+
+Developed a step ranking system using Bubble Sort to order users by daily step count.
+
+🔹 Concepts Covered
+
+Quick Sort
+
+Bubble Sort
+
+Comparing efficiency of sorting algorithms
+
+🔄 Version Control
+
+Committed all implementations with meaningful messages
+
+Successfully pushed all work to the GitHub repository
+
+✅ Day 27 Completed Successfully
