@@ -1167,3 +1167,42 @@ Committed all implementations with meaningful messages
 Successfully pushed all work to the GitHub repository
 
 ✅ Day 27 Completed Successfully
+
+---
+
+📅 Day 28 – Generics, Linked Lists & Stack-Based Systems
+
+Date: 19 January 2026
+
+🏁 Overview
+
+Day 28 focused on mastering C# Generics in depth and reinforcing DSA concepts through practical system implementations.
+
+🔹 Concepts Covered
+
+C# Generics and type safety
+
+Generic classes and methods
+
+Revisiting Linked Lists, Stack, and HashMap
+
+🧩 Coding Practice
+
+Implemented 5 practice models to strengthen understanding of Generics
+
+🔹 Scenario-Based Implementations
+1️⃣ ParcelTracker – Delivery Chain Management
+
+Built a delivery tracking system using a Singly Linked List to manage parcel flow dynamically.
+
+2️⃣ ExamProctor – Online Exam Review System
+
+Developed a review system using Stack and HashMap, applying functions to track and manage exam responses.
+
+🔄 Version Control
+
+Committed all implementations and practice code with clear messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 28 Completed Successfully
