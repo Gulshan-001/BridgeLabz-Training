@@ -1206,3 +1206,36 @@ Committed all implementations and practice code with clear messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 28 Completed Successfully
+
+---
+
+📅 Day 29 – Backtracking & Advanced Sorting
+
+Date: 20 January 2026
+
+🏁 Overview
+
+Day 29 focused on understanding backtracking techniques and strengthening knowledge of advanced sorting algorithms, with hands-on implementations.
+
+🔹 Concepts Covered
+
+Backtracking fundamentals and recursive problem solving
+
+Radix Sort and its application to large numeric data
+
+🔹 Scenario-Based Implementations
+1️⃣ Password Cracker Simulator
+
+Implemented a password cracker simulator using backtracking, exploring all possible combinations to validate passwords.
+
+2️⃣ Aadhar Number Sorting System
+
+Built a program to sort Aadhar numbers efficiently using Radix Sort, handling large numerical values accurately.
+
+🔄 Version Control
+
+Committed all implementations with clear and descriptive messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 29 Completed Successfully
