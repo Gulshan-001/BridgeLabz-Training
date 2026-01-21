@@ -22,17 +22,17 @@ public class RankUtility : IRankSystem
     {
         if (count >= students.Length)
         {
-            Console.WriteLine("Student limit reached.\n");
+            Console.WriteLine("District student limit reached.\n");
             return;
         }
 
-        Console.Write("Enter Roll No: ");
+        Console.Write("Roll No: ");
         int roll = int.Parse(Console.ReadLine());
 
-        Console.Write("Enter Name: ");
+        Console.Write("Name: ");
         string name = Console.ReadLine();
 
-        Console.Write("Enter Marks: ");
+        Console.Write("Marks: ");
         int marks = int.Parse(Console.ReadLine());
 
         students[count++] = new Student
@@ -42,28 +42,35 @@ public class RankUtility : IRankSystem
             Marks = marks
         };
 
-        Console.WriteLine("Student added.\n");
+        Console.WriteLine("Student added to district.\n");
     }
 
-    public void SortByMarks()
+    public void SortDistrict()
     {
-        // Sorting responsibility given to MergeSort class
+        // District submits a sorted list
         MergeSort.Sort(students, count);
-        Console.WriteLine("Sorted using Merge Sort.\n");
+        Console.WriteLine("District list sorted.\n");
     }
 
-    public void DisplayRankList()
+    public void DisplayDistrict()
     {
-        Console.WriteLine("Rank List:");
-        Console.WriteLine("----------");
-
+        Console.WriteLine("District Student List:");
         for (int i = 0; i < count; i++)
         {
             Console.WriteLine(
                 $"{i + 1}. {students[i].RollNo} - {students[i].Name} - {students[i].Marks}"
             );
         }
-
         Console.WriteLine();
+    }
+
+    public Student[] GetStudents()
+    {
+        return students;
+    }
+
+    public int GetCount()
+    {
+        return count;
     }
 }

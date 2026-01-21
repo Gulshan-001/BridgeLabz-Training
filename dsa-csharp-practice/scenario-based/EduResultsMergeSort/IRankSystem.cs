@@ -1,6 +1,8 @@
 public interface IRankSystem
 {
     void AddStudent();
-    void SortByMarks();
-    void DisplayRankList();
+    void SortDistrict();
+    void DisplayDistrict();
+    RankUtility.Student[] GetStudents();
+    int GetCount();
 }

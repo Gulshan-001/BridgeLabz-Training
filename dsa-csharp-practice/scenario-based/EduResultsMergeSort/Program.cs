@@ -2,9 +2,7 @@ class Program
 {
     static void Main()
     {
-        IRankSystem utility = new RankUtility(20);
-        Menu menu = new Menu(utility);
-
+        Menu menu = new Menu();
         menu.Show();
     }
 }
