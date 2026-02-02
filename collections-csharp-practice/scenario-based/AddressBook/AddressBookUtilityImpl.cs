@@ -1,38 +1,27 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
 
 // Implements address book operations
 public class AddressBookUtilityImpl : IAddressBook, IAddressBookSystem
 {
-    // UC6: Multiple Address Books storage
-    private AddressBook[] addressBooks = new AddressBook[10];
-    private int addressBookCount = 0;
-    private AddressBook currentAddressBook = null;
+    // UC6: Multiple Address Books storage (using Dictionary)
+    private Dictionary<string, AddressBook> addressBooks =
+        new Dictionary<string, AddressBook>();
 
-    // Existing single-address-book storage (kept as-is)
-    private Address[] contacts = new Address[100];
-    private int contactCount = 0;
+    private AddressBook currentAddressBook = null;
 
     // UC2 + UC7: Add new contact with duplicate check
     public void AddContact()
     {
-        if (contactCount >= 100)
-        {
-            Console.WriteLine("Address Book is full!");
-            return;
-        }
-
         Console.Write("First Name: ");
         string firstName = Console.ReadLine();
 
         // UC7: Duplicate check based on First Name
-        for (int i = 0; i < contactCount; i++)
+        if (currentAddressBook.Contacts.Exists(c => c.FirstName.Equals(firstName)))
         {
-            if (contacts[i].FirstName.Equals(firstName))
-            {
-                Console.WriteLine("Duplicate entry! Contact with this name already exists.");
-                return;
-            }
+            Console.WriteLine("Duplicate entry! Contact with this name already exists.");
+            return;
         }
 
         Console.Write("Last Name: ");
@@ -61,8 +50,7 @@ public class AddressBookUtilityImpl : IAddressBook, IAddressBookSystem
             city, state, zip, phone, email
         );
 
-        contacts[contactCount] = contact;
-        contactCount++;
+        currentAddressBook.Contacts.Add(contact);
 
         Console.WriteLine("Contact added successfully!");
     }
@@ -76,52 +64,47 @@ public class AddressBookUtilityImpl : IAddressBook, IAddressBookSystem
         Console.Write("Enter Phone Number of contact: ");
         string phoneNumber = Console.ReadLine();
 
-        bool found = false;
+        Address contact = currentAddressBook.Contacts
+            .Find(c => c.FirstName.Equals(firstName) &&
+                       c.PhoneNumber.Equals(phoneNumber));
 
-        for (int i = 0; i < contactCount; i++)
-        {
-            if (contacts[i].FirstName.Equals(firstName)
-                && contacts[i].PhoneNumber.Equals(phoneNumber))
-            {
-                Console.WriteLine("\nContact found. Enter new details:");
-
-                Console.Write("New Last Name: ");
-                string lastName = Console.ReadLine();
-
-                Console.Write("New Address: ");
-                string addressLine = Console.ReadLine();
-
-                Console.Write("New City: ");
-                string city = Console.ReadLine();
-
-                Console.Write("New State: ");
-                string state = Console.ReadLine();
-
-                Console.Write("New Zip: ");
-                string zip = Console.ReadLine();
-
-                Console.Write("New Phone Number: ");
-                string newPhone = Console.ReadLine();
-
-                Console.Write("New Email: ");
-                string email = Console.ReadLine();
-
-                // Replace old contact with updated one
-                contacts[i] = new Address(
-                    firstName, lastName, addressLine,
-                    city, state, zip, newPhone, email
-                );
-
-                Console.WriteLine("Contact updated successfully!");
-                found = true;
-                break;
-            }
-        }
-
-        if (!found)
+        if (contact == null)
         {
             Console.WriteLine("X Contact not found!");
+            return;
         }
+
+        Console.WriteLine("\nContact found. Enter new details:");
+
+        Console.Write("New Last Name: ");
+        string lastName = Console.ReadLine();
+
+        Console.Write("New Address: ");
+        string addressLine = Console.ReadLine();
+
+        Console.Write("New City: ");
+        string city = Console.ReadLine();
+
+        Console.Write("New State: ");
+        string state = Console.ReadLine();
+
+        Console.Write("New Zip: ");
+        string zip = Console.ReadLine();
+
+        Console.Write("New Phone Number: ");
+        string newPhone = Console.ReadLine();
+
+        Console.Write("New Email: ");
+        string email = Console.ReadLine();
+
+        currentAddressBook.Contacts.Remove(contact);
+
+        currentAddressBook.Contacts.Add(new Address(
+            firstName, lastName, addressLine,
+            city, state, zip, newPhone, email
+        ));
+
+        Console.WriteLine("Contact updated successfully!");
     }
 
     // UC4: Delete contact using First Name + Phone Number
@@ -133,29 +116,16 @@ public class AddressBookUtilityImpl : IAddressBook, IAddressBookSystem
         Console.Write("Enter Phone Number of contact: ");
         string phoneNumber = Console.ReadLine();
 
-        bool found = false;
+        Address contact = currentAddressBook.Contacts
+            .Find(c => c.FirstName.Equals(firstName) &&
+                       c.PhoneNumber.Equals(phoneNumber));
 
-        for (int i = 0; i < contactCount; i++)
+        if (contact != null)
         {
-            if (contacts[i].FirstName.Equals(firstName)
-                && contacts[i].PhoneNumber.Equals(phoneNumber))
-            {
-                // Shift elements to left to fill the gap
-                for (int j = i; j < contactCount - 1; j++)
-                {
-                    contacts[j] = contacts[j + 1];
-                }
-
-                contacts[contactCount - 1] = null;
-                contactCount--;
-
-                Console.WriteLine("Contact deleted successfully!");
-                found = true;
-                break;
-            }
+            currentAddressBook.Contacts.Remove(contact);
+            Console.WriteLine("Contact deleted successfully!");
         }
-
-        if (!found)
+        else
         {
             Console.WriteLine("Contact not found!");
         }
@@ -165,41 +135,28 @@ public class AddressBookUtilityImpl : IAddressBook, IAddressBookSystem
     public void AddMultipleContacts()
     {
         char choice;
-
         do
         {
-            AddContact(); // reuse UC2 logic (duplicate check applies)
-
+            AddContact();
             Console.Write("\nDo you want to add another contact? (y/n): ");
             choice = Convert.ToChar(Console.ReadLine().ToLower());
-
         } while (choice == 'y');
     }
 
     // UC6: Add new Address Book
     public void AddAddressBook()
     {
-        if (addressBookCount >= 10)
-        {
-            Console.WriteLine("Cannot add more Address Books.");
-            return;
-        }
-
         Console.Write("Enter Address Book Name: ");
         string name = Console.ReadLine();
 
-        // Check for unique name
-        for (int i = 0; i < addressBookCount; i++)
+        if (addressBooks.ContainsKey(name))
         {
-            if (addressBooks[i].Name.Equals(name))
-            {
-                Console.WriteLine("Address Book with this name already exists!");
-                return;
-            }
+            Console.WriteLine("Address Book with this name already exists!");
+            return;
         }
 
         AddressBook book = new AddressBook(name);
-        addressBooks[addressBookCount++] = book;
+        addressBooks[name] = book;
         currentAddressBook = book;
 
         Console.WriteLine($"Address Book '{name}' created and selected.");
@@ -208,32 +165,30 @@ public class AddressBookUtilityImpl : IAddressBook, IAddressBookSystem
     // UC6.1: Switch current Address Book
     public void SwitchAddressBook()
     {
-        if (addressBookCount == 0)
+        if (addressBooks.Count == 0)
         {
             Console.WriteLine("No Address Books available.");
             return;
         }
 
         Console.WriteLine("\nAvailable Address Books:");
-        for (int i = 0; i < addressBookCount; i++)
+        foreach (string name in addressBooks.Keys)
         {
-            Console.WriteLine("- " + addressBooks[i].Name);
+            Console.WriteLine("- " + name);
         }
 
         Console.Write("\nEnter Address Book name to switch: ");
-        string name = Console.ReadLine();
+        string input = Console.ReadLine();
 
-        for (int i = 0; i < addressBookCount; i++)
+        if (addressBooks.ContainsKey(input))
         {
-            if (addressBooks[i].Name.Equals(name))
-            {
-                currentAddressBook = addressBooks[i];
-                Console.WriteLine($"Switched to Address Book: {name}");
-                return;
-            }
+            currentAddressBook = addressBooks[input];
+            Console.WriteLine($"Switched to Address Book: {input}");
         }
-
-        Console.WriteLine("Address Book not found.");
+        else
+        {
+            Console.WriteLine("Address Book not found.");
+        }
     }
 
     // UC6.2: Check if an Address Book is selected
@@ -249,354 +204,175 @@ public class AddressBookUtilityImpl : IAddressBook, IAddressBookSystem
     }
 
     // UC8: Search person by City or State across multiple Address Books
-public void SearchPersonByCityOrState()
-{
-    if (addressBookCount == 0)
+    public void SearchPersonByCityOrState()
     {
-        Console.WriteLine("No Address Books available.");
-        return;
-    }
+        Console.Write("Enter City or State: ");
+        string value = Console.ReadLine();
 
-    Console.WriteLine("\nSearch by:");
-    Console.WriteLine("1. City");
-    Console.WriteLine("2. State");
-    Console.Write("Enter choice: ");
-    int choice = Convert.ToInt32(Console.ReadLine());
+        bool found = false;
 
-    Console.Write("Enter value to search: ");
-    string searchValue = Console.ReadLine();
-
-    bool found = false;
-
-    Console.WriteLine("\n--- Search Results ---");
-
-    for (int i = 0; i < addressBookCount; i++)
-    {
-        AddressBook book = addressBooks[i];
-
-        for (int j = 0; j < book.ContactCount; j++)
+        foreach (var book in addressBooks.Values)
         {
-            Address person = book.Contacts[j];
-
-            if ((choice == 1 && person.City.Equals(searchValue)) ||
-                (choice == 2 && person.State.Equals(searchValue)))
+            foreach (var person in book.Contacts)
             {
-                Console.WriteLine(
-                    $"[AddressBook: {book.Name}] " +
-                    $"{person.FirstName} {person.LastName}, " +
-                    $"{person.City}, {person.State}, {person.PhoneNumber}"
-                );
-
-                found = true;
+                if (person.City.Equals(value) || person.State.Equals(value))
+                {
+                    Console.WriteLine(
+                        $"[AddressBook: {book.Name}] " +
+                        $"{person.FirstName} {person.LastName}, " +
+                        $"{person.City}, {person.State}, {person.PhoneNumber}"
+                    );
+                    found = true;
+                }
             }
+        }
+
+        if (!found)
+        {
+            Console.WriteLine("No persons found for given City/State.");
         }
     }
 
-    if (!found)
-    {
-        Console.WriteLine("No persons found for given City/State.");
-    }
-}
     // UC9: View persons by City or State across multiple Address Books
     public void ViewPersonsByCityOrState()
     {
-        for (int i = 0; i < addressBookCount; i++)
+        foreach (var book in addressBooks.Values)
         {
-            AddressBook b = addressBooks[i];
-            for (int j = 0; j < b.ContactCount; j++)
+            foreach (var person in book.Contacts)
             {
-                Address a = b.Contacts[j];
-                Console.WriteLine($"{a.City} - {a.FirstName} ({b.Name})");
+                Console.WriteLine($"{person.City} - {person.FirstName} ({book.Name})");
             }
         }
     }
+
     // UC10: Count persons by City or State across all Address Books
     public void CountPersonsByCityOrState()
     {
-    if (addressBookCount == 0)
-    {
-        Console.WriteLine("No Address Books available.");
-        return;
-    }
+        Console.Write("Enter City or State: ");
+        string value = Console.ReadLine();
 
-    Console.WriteLine("\nCount by:");
-    Console.WriteLine("1. City");
-    Console.WriteLine("2. State");
-    Console.Write("Enter choice: ");
-    int choice = Convert.ToInt32(Console.ReadLine());
+        int count = 0;
 
-    Console.Write("Enter City/State name: ");
-    string value = Console.ReadLine();
-
-    int count = 0;
-
-    for (int i = 0; i < addressBookCount; i++)
-    {
-        AddressBook book = addressBooks[i];
-
-        for (int j = 0; j < book.ContactCount; j++)
+        foreach (var book in addressBooks.Values)
         {
-            Address person = book.Contacts[j];
-
-            if ((choice == 1 && person.City.Equals(value)) ||
-                (choice == 2 && person.State.Equals(value)))
-            {
-                count++;
-            }
+            count += book.Contacts.FindAll(
+                p => p.City.Equals(value) || p.State.Equals(value)).Count;
         }
+
+        Console.WriteLine($"Total persons in {value}: {count}");
     }
 
-    Console.WriteLine($"\nTotal persons in {value}: {count}");
-}
     // UC11: Sort contacts alphabetically by First Name
     public void SortContactsByName()
     {
-    if (currentAddressBook == null)
-    {
-        Console.WriteLine("No Address Book selected.");
-        return;
+        currentAddressBook.Contacts.Sort(
+            (a, b) => a.FirstName.CompareTo(b.FirstName));
+
+        Console.WriteLine("Contacts sorted alphabetically by name.");
     }
 
-    int n = currentAddressBook.ContactCount;
-
-    if (n == 0)
-    {
-        Console.WriteLine("No contacts to sort.");
-        return;
-    }
-
-    // Simple Bubble Sort (easy to understand)
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = 0; j < n - i - 1; j++)
-        {
-            if (string.Compare(
-                    currentAddressBook.Contacts[j].FirstName,
-                    currentAddressBook.Contacts[j + 1].FirstName) > 0)
-            {
-                // swap
-                Address temp = currentAddressBook.Contacts[j];
-                currentAddressBook.Contacts[j] = currentAddressBook.Contacts[j + 1];
-                currentAddressBook.Contacts[j + 1] = temp;
-            }
-        }
-    }
-
-    Console.WriteLine("\nContacts sorted alphabetically by name:\n");
-
-    // Display sorted contacts
-    for (int i = 0; i < n; i++)
-    {
-        Address a = currentAddressBook.Contacts[i];
-        Console.WriteLine($"{a.FirstName} {a.LastName} - {a.PhoneNumber}");
-    }
-}
     // UC12: Sort contacts by City, State, or Zip
-public void SortContactsByCityStateOrZip()
-{
-    if (currentAddressBook == null)
+    public void SortContactsByCityStateOrZip()
     {
-        Console.WriteLine("No Address Book selected.");
-        return;
-    }
+        Console.WriteLine("\nSort by:");
+        Console.WriteLine("1. City");
+        Console.WriteLine("2. State");
+        Console.WriteLine("3. Zip");
 
-    int n = currentAddressBook.ContactCount;
+        int choice = Convert.ToInt32(Console.ReadLine());
 
-    if (n == 0)
-    {
-        Console.WriteLine("No contacts to sort.");
-        return;
-    }
-
-    Console.WriteLine("\nSort by:");
-    Console.WriteLine("1. City");
-    Console.WriteLine("2. State");
-    Console.WriteLine("3. Zip");
-    Console.Write("Enter choice: ");
-    int choice = Convert.ToInt32(Console.ReadLine());
-
-    // Bubble sort based on selected field
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = 0; j < n - i - 1; j++)
+        currentAddressBook.Contacts.Sort((a, b) =>
         {
-            string value1 = "";
-            string value2 = "";
+            if (choice == 1) return a.City.CompareTo(b.City);
+            if (choice == 2) return a.State.CompareTo(b.State);
+            return a.Zip.CompareTo(b.Zip);
+        });
 
-            if (choice == 1)
-            {
-                value1 = currentAddressBook.Contacts[j].City;
-                value2 = currentAddressBook.Contacts[j + 1].City;
-            }
-            else if (choice == 2)
-            {
-                value1 = currentAddressBook.Contacts[j].State;
-                value2 = currentAddressBook.Contacts[j + 1].State;
-            }
-            else if (choice == 3)
-            {
-                value1 = currentAddressBook.Contacts[j].Zip;
-                value2 = currentAddressBook.Contacts[j + 1].Zip;
-            }
-            else
-            {
-                Console.WriteLine("Invalid choice!");
-                return;
-            }
-
-            if (string.Compare(value1, value2) > 0)
-            {
-                Address temp = currentAddressBook.Contacts[j];
-                currentAddressBook.Contacts[j] = currentAddressBook.Contacts[j + 1];
-                currentAddressBook.Contacts[j + 1] = temp;
-            }
-        }
+        Console.WriteLine("Contacts sorted successfully.");
     }
 
-    Console.WriteLine("\nSorted Contacts:\n");
-
-    for (int i = 0; i < n; i++)
-    {
-        Address a = currentAddressBook.Contacts[i];
-        Console.WriteLine(
-            $"{a.FirstName} {a.LastName} | {a.City}, {a.State}, {a.Zip}"
-        );
-    }
-}
     // UC13: Write Address Book to file
-public void WriteAddressBookToFile()
-{
-    if (currentAddressBook == null)
+    public void WriteAddressBookToFile()
     {
-        Console.WriteLine("No Address Book selected.");
-        return;
-    }
+        string fileName = currentAddressBook.Name + ".txt";
 
-    string fileName = currentAddressBook.Name + ".txt";
-
-    using (StreamWriter writer = new StreamWriter(fileName))
-    {
-        for (int i = 0; i < currentAddressBook.ContactCount; i++)
+        using (StreamWriter writer = new StreamWriter(fileName))
         {
-            Address a = currentAddressBook.Contacts[i];
-
-            string line =
-                a.FirstName + "," +
-                a.LastName + "," +
-                a.AddressLine + "," +
-                a.City + "," +
-                a.State + "," +
-                a.Zip + "," +
-                a.PhoneNumber + "," +
-                a.Email;
-
-            writer.WriteLine(line);
+            foreach (var a in currentAddressBook.Contacts)
+            {
+                writer.WriteLine(
+                    $"{a.FirstName},{a.LastName},{a.AddressLine}," +
+                    $"{a.City},{a.State},{a.Zip},{a.PhoneNumber},{a.Email}");
+            }
         }
+
+        Console.WriteLine($"Address Book saved to file: {fileName}");
     }
 
-    Console.WriteLine($"Address Book saved to file: {fileName}");
-}
     // UC13: Read Address Book from file
-public void ReadAddressBookFromFile()
-{
-    if (currentAddressBook == null)
+    public void ReadAddressBookFromFile()
     {
-        Console.WriteLine("No Address Book selected.");
-        return;
-    }
+        string fileName = currentAddressBook.Name + ".txt";
 
-    string fileName = currentAddressBook.Name + ".txt";
+        if (!File.Exists(fileName))
+        {
+            Console.WriteLine("File does not exist.");
+            return;
+        }
 
-    if (!File.Exists(fileName))
-    {
-        Console.WriteLine("File does not exist.");
-        return;
-    }
+        currentAddressBook.Contacts.Clear();
 
-    currentAddressBook.ContactCount = 0;
-
-    using (StreamReader reader = new StreamReader(fileName))
-    {
-        string line;
-
-        while ((line = reader.ReadLine()) != null)
+        foreach (string line in File.ReadAllLines(fileName))
         {
             string[] data = line.Split(',');
 
-            Address contact = new Address(
+            currentAddressBook.Contacts.Add(new Address(
                 data[0], data[1], data[2],
                 data[3], data[4], data[5],
                 data[6], data[7]
-            );
-
-            currentAddressBook.Contacts[currentAddressBook.ContactCount++] = contact;
+            ));
         }
+
+        Console.WriteLine($"Address Book loaded from file: {fileName}");
     }
 
-    Console.WriteLine($"Address Book loaded from file: {fileName}");
-}
     // UC14: Write Address Book to CSV file
-public void WriteAddressBookToCSV()
-{
-    if (currentAddressBook == null)
+    public void WriteAddressBookToCSV()
     {
-        Console.WriteLine("No Address Book selected.");
-        return;
-    }
+        string fileName = currentAddressBook.Name + ".csv";
 
-    string fileName = currentAddressBook.Name + ".csv";
-
-    using (StreamWriter writer = new StreamWriter(fileName))
-    {
-        // CSV header
-        writer.WriteLine("FirstName,LastName,Address,City,State,Zip,Phone,Email");
-
-        for (int i = 0; i < currentAddressBook.ContactCount; i++)
+        using (StreamWriter writer = new StreamWriter(fileName))
         {
-            Address a = currentAddressBook.Contacts[i];
+            writer.WriteLine("FirstName,LastName,Address,City,State,Zip,Phone,Email");
 
-            writer.WriteLine(
-                a.FirstName + "," +
-                a.LastName + "," +
-                a.AddressLine + "," +
-                a.City + "," +
-                a.State + "," +
-                a.Zip + "," +
-                a.PhoneNumber + "," +
-                a.Email
-            );
+            foreach (var a in currentAddressBook.Contacts)
+            {
+                writer.WriteLine(
+                    $"{a.FirstName},{a.LastName},{a.AddressLine}," +
+                    $"{a.City},{a.State},{a.Zip},{a.PhoneNumber},{a.Email}");
+            }
         }
+
+        Console.WriteLine($"Address Book exported to CSV file: {fileName}");
     }
 
-    Console.WriteLine($"Address Book exported to CSV file: {fileName}");
-}
     // UC14: Read Address Book from CSV file
-public void ReadAddressBookFromCSV()
-{
-    if (currentAddressBook == null)
+    public void ReadAddressBookFromCSV()
     {
-        Console.WriteLine("No Address Book selected.");
-        return;
-    }
+        string fileName = currentAddressBook.Name + ".csv";
 
-    string fileName = currentAddressBook.Name + ".csv";
+        if (!File.Exists(fileName))
+        {
+            Console.WriteLine("CSV file does not exist.");
+            return;
+        }
 
-    if (!File.Exists(fileName))
-    {
-        Console.WriteLine("CSV file does not exist.");
-        return;
-    }
+        currentAddressBook.Contacts.Clear();
 
-    currentAddressBook.ContactCount = 0;
-
-    using (StreamReader reader = new StreamReader(fileName))
-    {
-        string line;
         bool isHeader = true;
 
-        while ((line = reader.ReadLine()) != null)
+        foreach (string line in File.ReadAllLines(fileName))
         {
-            // Skip header
             if (isHeader)
             {
                 isHeader = false;
@@ -605,16 +381,13 @@ public void ReadAddressBookFromCSV()
 
             string[] data = line.Split(',');
 
-            Address contact = new Address(
+            currentAddressBook.Contacts.Add(new Address(
                 data[0], data[1], data[2],
                 data[3], data[4], data[5],
                 data[6], data[7]
-            );
-
-            currentAddressBook.Contacts[currentAddressBook.ContactCount++] = contact;
+            ));
         }
-    }
 
-    Console.WriteLine($"Address Book loaded from CSV file: {fileName}");
-}
+        Console.WriteLine($"Address Book loaded from CSV file: {fileName}");
+    }
 }
