@@ -56,6 +56,8 @@ public class AddressBookMenu
                 Console.WriteLine("7. Count Persons by City or State");
                 Console.WriteLine("8. Sort Contacts by Name");
                 Console.WriteLine("9. Sort Contacts by City / State / Zip");
+                Console.WriteLine("10. Save Address Book to File");
+                Console.WriteLine("11. Load Address Book from File");
                 Console.WriteLine("0. Back");
 
                 int op = Convert.ToInt32(Console.ReadLine());
@@ -97,6 +99,12 @@ public class AddressBookMenu
                         break;
                     case 9:
                         contacts.SortContactsByCityStateOrZip();
+                        break;
+                    case 10:
+                        contacts.WriteAddressBookToFile();
+                        break;
+                    case 11:
+                        contacts.ReadAddressBookFromFile();
                         break;
                     default:
                         Console.WriteLine("Invalid choice!");

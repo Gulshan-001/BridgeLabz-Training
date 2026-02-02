@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 
 // Implements address book operations
 public class AddressBookUtilityImpl : IAddressBook, IAddressBookSystem
@@ -461,5 +462,77 @@ public void SortContactsByCityStateOrZip()
             $"{a.FirstName} {a.LastName} | {a.City}, {a.State}, {a.Zip}"
         );
     }
+}
+    // UC13: Write Address Book to file
+public void WriteAddressBookToFile()
+{
+    if (currentAddressBook == null)
+    {
+        Console.WriteLine("No Address Book selected.");
+        return;
+    }
+
+    string fileName = currentAddressBook.Name + ".txt";
+
+    using (StreamWriter writer = new StreamWriter(fileName))
+    {
+        for (int i = 0; i < currentAddressBook.ContactCount; i++)
+        {
+            Address a = currentAddressBook.Contacts[i];
+
+            string line =
+                a.FirstName + "," +
+                a.LastName + "," +
+                a.AddressLine + "," +
+                a.City + "," +
+                a.State + "," +
+                a.Zip + "," +
+                a.PhoneNumber + "," +
+                a.Email;
+
+            writer.WriteLine(line);
+        }
+    }
+
+    Console.WriteLine($"Address Book saved to file: {fileName}");
+}
+    // UC13: Read Address Book from file
+public void ReadAddressBookFromFile()
+{
+    if (currentAddressBook == null)
+    {
+        Console.WriteLine("No Address Book selected.");
+        return;
+    }
+
+    string fileName = currentAddressBook.Name + ".txt";
+
+    if (!File.Exists(fileName))
+    {
+        Console.WriteLine("File does not exist.");
+        return;
+    }
+
+    currentAddressBook.ContactCount = 0;
+
+    using (StreamReader reader = new StreamReader(fileName))
+    {
+        string line;
+
+        while ((line = reader.ReadLine()) != null)
+        {
+            string[] data = line.Split(',');
+
+            Address contact = new Address(
+                data[0], data[1], data[2],
+                data[3], data[4], data[5],
+                data[6], data[7]
+            );
+
+            currentAddressBook.Contacts[currentAddressBook.ContactCount++] = contact;
+        }
+    }
+
+    Console.WriteLine($"Address Book loaded from file: {fileName}");
 }
 }

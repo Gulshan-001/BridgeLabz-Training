@@ -24,4 +24,7 @@ public interface IAddressBook
     void SortContactsByName();
     // UC12
     void SortContactsByCityStateOrZip();
+    // UC13
+    void WriteAddressBookToFile();
+    void ReadAddressBookFromFile();
 }
