@@ -1,13 +1,14 @@
 using System.Collections.Generic;
-//Resresents ONE Address Book
-public class AddressBook
+
+// Represents a single Address Book
+public class AddressBook<T> where T : IContactEntity
 {
     public string Name { get; private set; }
-    public List<Address> Contacts { get; private set; }
+    public List<T> Contacts { get; private set; }
 
     public AddressBook(string name)
     {
         Name = name;
-        Contacts = new List<Address>();
+        Contacts = new List<T>();
     }
 }
