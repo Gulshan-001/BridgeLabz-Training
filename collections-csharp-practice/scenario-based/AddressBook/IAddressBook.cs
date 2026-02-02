@@ -27,4 +27,7 @@ public interface IAddressBook
     // UC13
     void WriteAddressBookToFile();
     void ReadAddressBookFromFile();
+    // UC14
+    void WriteAddressBookToCSV();
+    void ReadAddressBookFromCSV();
 }

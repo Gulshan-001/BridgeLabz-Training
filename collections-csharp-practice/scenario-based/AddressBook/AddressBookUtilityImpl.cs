@@ -535,4 +535,86 @@ public void ReadAddressBookFromFile()
 
     Console.WriteLine($"Address Book loaded from file: {fileName}");
 }
+    // UC14: Write Address Book to CSV file
+public void WriteAddressBookToCSV()
+{
+    if (currentAddressBook == null)
+    {
+        Console.WriteLine("No Address Book selected.");
+        return;
+    }
+
+    string fileName = currentAddressBook.Name + ".csv";
+
+    using (StreamWriter writer = new StreamWriter(fileName))
+    {
+        // CSV header
+        writer.WriteLine("FirstName,LastName,Address,City,State,Zip,Phone,Email");
+
+        for (int i = 0; i < currentAddressBook.ContactCount; i++)
+        {
+            Address a = currentAddressBook.Contacts[i];
+
+            writer.WriteLine(
+                a.FirstName + "," +
+                a.LastName + "," +
+                a.AddressLine + "," +
+                a.City + "," +
+                a.State + "," +
+                a.Zip + "," +
+                a.PhoneNumber + "," +
+                a.Email
+            );
+        }
+    }
+
+    Console.WriteLine($"Address Book exported to CSV file: {fileName}");
+}
+    // UC14: Read Address Book from CSV file
+public void ReadAddressBookFromCSV()
+{
+    if (currentAddressBook == null)
+    {
+        Console.WriteLine("No Address Book selected.");
+        return;
+    }
+
+    string fileName = currentAddressBook.Name + ".csv";
+
+    if (!File.Exists(fileName))
+    {
+        Console.WriteLine("CSV file does not exist.");
+        return;
+    }
+
+    currentAddressBook.ContactCount = 0;
+
+    using (StreamReader reader = new StreamReader(fileName))
+    {
+        string line;
+        bool isHeader = true;
+
+        while ((line = reader.ReadLine()) != null)
+        {
+            // Skip header
+            if (isHeader)
+            {
+                isHeader = false;
+                continue;
+            }
+
+            string[] data = line.Split(',');
+
+            Address contact = new Address(
+                data[0], data[1], data[2],
+                data[3], data[4], data[5],
+                data[6], data[7]
+            );
+
+            currentAddressBook.Contacts[currentAddressBook.ContactCount++] = contact;
+        }
+    }
+
+    Console.WriteLine($"Address Book loaded from CSV file: {fileName}");
+}
 }
