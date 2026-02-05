@@ -1273,3 +1273,46 @@ Committed all stream-based implementations with clear messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 30 Completed Successfully
+
+---
+📅 Day 31 – Exception Handling & Concept Revision
+
+Date: 22 January 2026
+
+🏁 Overview
+
+Day 31 focused on strengthening program reliability through Exception Handling in C# and revising key concepts to solidify overall understanding.
+
+🔹 Concepts Covered
+
+Exception Handling in C#
+
+try, catch, finally blocks
+
+Custom exceptions
+
+Revision of:
+
+Collections
+
+Generics
+
+Streams
+
+Exception Handling
+
+🧩 Learning Outcomes
+
+Handling runtime errors gracefully
+
+Writing safer and more reliable programs
+
+Reinforcing core C# and DSA concepts through revision
+
+🔄 Version Control
+
+Practiced exception handling examples and revisions
+
+Successfully pushed all related work to the GitHub repository
+
+✅ Day 31 Completed Successfully
