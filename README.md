@@ -1384,3 +1384,40 @@ Committed all practice implementations with clear messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 33 Completed Successfully
+
+---
+
+Day 34 – Regex, Reflection & Unit Testing in C#
+
+Date: 27 January 2026
+
+🏁 Overview
+
+Day 34 focused on learning advanced C# features including Regular Expressions, Annotations, Reflection, and Unit Testing, with practical scenario-based implementations.
+
+🔹 Concepts Covered
+
+Regular Expressions (Regex) for pattern matching and validation
+
+Applying annotations (attributes) in real scenarios
+
+Reflection for inspecting metadata at runtime
+
+Unit testing using NUnit and MSTest
+
+🔹 Scenario-Based Implementations
+1️⃣ HealthCheckPro – API Validation System
+
+Built a validation system using Regex, annotations, and reflection to ensure correctness and reliability.
+
+2️⃣ EventTracker – Event Management System
+
+Developed an event management system applying annotations and unit testing to verify functionality.
+
+🔄 Version Control
+
+Committed all implementations and test cases with meaningful messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 34 Completed Successfully
