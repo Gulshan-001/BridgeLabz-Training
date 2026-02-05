@@ -1421,3 +1421,38 @@ Committed all implementations and test cases with meaningful messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 34 Completed Successfully
+
+---
+
+📅 Day 35 – File I/O Programming & Real-World Applications
+
+Date: 28 January 2026
+
+🏁 Overview
+
+Day 35 focused on learning File I/O programming in C#, emphasizing reading from and writing to files, and applying these concepts to real-world scenarios.
+
+🔹 Concepts Covered
+
+File I/O operations in C#
+
+Working with file streams
+
+Reading, writing, and managing file data
+
+🔹 Scenario-Based Implementations
+1️⃣ Aero-Vigil – Aviation Data Monitoring System
+
+Built a file-based system to handle and monitor aviation-related data using I/O operations.
+
+2️⃣ Bank Account Validation System
+
+Implemented file-based validations and record management for bank accounts using File I/O concepts.
+
+🔄 Version Control
+
+Committed all File I/O implementations with clear messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 35 Completed Successfully
