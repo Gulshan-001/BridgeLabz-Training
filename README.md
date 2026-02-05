@@ -1350,3 +1350,37 @@ Committed all revision-based practice work
 Successfully pushed updates to the GitHub repository
 
 ✅ Day 32 Completed Successfully
+
+---
+
+📅 Day 33 – Custom Exceptions & Annotations in C#
+
+Date: 24 January 2026
+
+🏁 Overview
+
+Day 33 focused on improving error handling and code metadata usage by learning custom exceptions and annotations (attributes) in C#.
+
+🔹 Concepts Covered
+
+Creating and handling custom exceptions
+
+Using exceptions for better application control
+
+Understanding annotations (attributes) in C#
+
+Applying attributes in programs
+
+🧩 Coding Practice
+
+Implemented programs using custom exceptions
+
+Practiced applying annotations to enhance code behavior and clarity
+
+🔄 Version Control
+
+Committed all practice implementations with clear messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 33 Completed Successfully
