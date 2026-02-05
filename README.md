@@ -1239,3 +1239,37 @@ Committed all implementations with clear and descriptive messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 29 Completed Successfully
+
+---
+📅 Day 30 – C# Streams & Scenario-Based Applications
+
+Date: 21 January 2026
+
+🏁 Overview
+
+Day 30 focused on learning and practicing C# Streams, with emphasis on efficient data reading, writing, and processing through real-world scenarios.
+
+🔹 Concepts Covered
+
+C# Streams
+
+Reading and writing data using streams
+
+Applying streams in scenario-based problems
+
+🔹 Scenario-Based Implementations
+1️⃣ Supermarket Billing Queue
+
+Built a billing system using C# streams to process customer transactions efficiently in a queue-based scenario.
+
+2️⃣ Rank Sheet Generator
+
+Developed a rank sheet generator applying stream-based processing to handle and organize student data.
+
+🔄 Version Control
+
+Committed all stream-based implementations with clear messages
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 30 Completed Successfully
