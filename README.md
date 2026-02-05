@@ -1316,3 +1316,37 @@ Practiced exception handling examples and revisions
 Successfully pushed all related work to the GitHub repository
 
 ✅ Day 31 Completed Successfully
+
+---
+
+📅 Day 32 – Weekly Revision & Practical Problem Solving
+
+Date: 23 January 2026
+
+🏁 Overview
+
+Day 32 focused on revising key concepts covered during the week and reinforcing them through hands-on coding practice.
+
+🔹 Concepts Revised
+
+Streams
+
+Collections
+
+Generics
+
+Exception Handling
+
+🧩 Coding Practice
+
+Solved multiple problems applying revised concepts
+
+Focused on improving implementation accuracy and confidence
+
+🔄 Version Control
+
+Committed all revision-based practice work
+
+Successfully pushed updates to the GitHub repository
+
+✅ Day 32 Completed Successfully
