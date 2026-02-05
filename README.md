@@ -1456,3 +1456,46 @@ Committed all File I/O implementations with clear messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 35 Completed Successfully
+
+---
+
+📅 Day 36 – JSON Data Handling & Scenario-Based Systems
+
+Date: 29 January 2026
+
+🏁 Overview
+
+Day 36 focused on building real-world scenario-based applications and learning the fundamentals of JSON data handling for structured data integration.
+
+🔹 Concepts Covered
+
+JSON data format and structure
+
+Basic JSON operations for data storage and exchange
+
+Integrating structured data into applications
+
+🔹 Scenario-Based Implementations
+1️⃣ Ocean-Fleet-App
+
+Developed a marine fleet management system to track vessel data and performance using structured data handling.
+
+2️⃣ Stream-Buzz
+
+Built a streaming analytics application to process and manage platform data efficiently.
+
+🧩 Learning Outcomes
+
+Understanding how JSON is used in real-world applications
+
+Working with structured data formats in system design
+
+Integrating JSON with scenario-based application logic
+
+🔄 Version Control
+
+Committed all implementations and learning-based code
+
+Successfully pushed the complete work to the GitHub repository
+
+✅ Day 36 Completed Successfully
