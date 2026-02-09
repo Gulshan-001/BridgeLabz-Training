@@ -1733,6 +1733,41 @@ Cascading (referential actions)
 Attended a 4-hour soft skills session focused on effective communication and professional growth
 
 Learned and discussed advanced DBMS features to support database-driven applications
-✅ Day 42 Completed Successfully
 
+✅ Day 43 Completed Successfully
 ---
+👇
+
+📅 Day 44 – DBMS Integration & CRUD Operations
+
+Date: 7 February 2026
+
+🏁 Overview
+
+Day 44 focused on integrating DBMS with a C# console application and building the foundation of a database-driven healthcare system.
+
+🔹 Concepts Covered
+
+Connecting a C# console application with DBMS
+
+Database schema design for a healthcare system
+
+CRUD operations:
+
+Create
+
+Read
+
+Update
+
+Delete
+
+🧩 Practical Work
+
+Established database connectivity with a C# console application
+
+Designed and structured tables for the Healthcare application
+
+Implemented CRUD operations to manage healthcare-related data
+
+✅ Day 44 Completed Successfully
