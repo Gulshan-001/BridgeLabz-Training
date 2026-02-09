@@ -1598,3 +1598,42 @@ Committed all enhancements and practice implementations with clear messages
 Successfully pushed the complete work to the GitHub repository
 
 ✅ Day 39 Completed Successfully
+
+---
+
+📅 Day 40 – Design Principles, Async Programming & Delegates
+
+Date: 3 February 2026
+
+🏁 Overview
+
+Day 40 focused on strengthening software design fundamentals and advancing C# concurrency and event-driven programming, along with further system enhancements.
+
+🔹 Concepts Covered
+
+Design principles and design patterns
+
+Asynchronous programming and multithreading in C#
+
+Delegates for callbacks and event handling
+
+🔹 System Enhancements
+Address Book System
+
+Enhanced the Address Book System by:
+
+Utilizing collections for efficient data handling
+
+Applying generics for flexibility
+
+Adding exception handling for robustness
+
+Implementing three additional utility features
+
+🔄 Version Control
+
+Committed all enhancements and practice work with clear messages
+
+Successfully pushed the complete updates to the GitHub repository
+
+✅ Day 40 Completed Successfully
