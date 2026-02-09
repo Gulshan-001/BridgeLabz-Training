@@ -1637,3 +1637,35 @@ Committed all enhancements and practice work with clear messages
 Successfully pushed the complete updates to the GitHub repository
 
 ✅ Day 40 Completed Successfully
+
+---
+
+📅 Day 41 – DBMS Fundamentals & SQL Practice
+
+Date: 4 February 2026
+
+🏁 Overview
+
+Day 41 focused on understanding the basics of Database Management Systems (DBMS) and gaining hands-on experience with SQL queries using SQL Server.
+
+🔹 Concepts Covered
+
+Introduction to DBMS
+
+Database fundamentals and operations
+
+Writing and executing SQL queries
+
+🧩 Practical Work
+
+Attended an in-depth lecture on DBMS concepts
+
+Practiced SQL queries to understand data retrieval and manipulation
+
+🔄 Version Control
+
+Practiced SQL scripts and database queries
+
+Saved and documented all work for future integration
+
+✅ Day 41 Completed Successfully
