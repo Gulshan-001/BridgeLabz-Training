@@ -1705,3 +1705,34 @@ Documented SQL practice and learning outcomes
 Saved all related work for future database-driven projects
 
 ✅ Day 42 Completed Successfully
+
+---
+
+📅 Day 43 – Soft Skills & Advanced DBMS Concepts
+
+Date: 6 February 2026
+
+🏁 Overview
+
+Day 43 focused on professional skill development through soft skills training and strengthening advanced DBMS concepts for real-world application readiness.
+
+🔹 Concepts Covered
+
+Soft skills: communication, professionalism, workplace readiness
+
+DBMS concepts:
+
+Triggers
+
+Stored Procedures
+
+Cascading (referential actions)
+
+🧩 Practical Work
+
+Attended a 4-hour soft skills session focused on effective communication and professional growth
+
+Learned and discussed advanced DBMS features to support database-driven applications
+✅ Day 42 Completed Successfully
+
+---
