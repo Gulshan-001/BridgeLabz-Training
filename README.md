@@ -1669,3 +1669,39 @@ Practiced SQL scripts and database queries
 Saved and documented all work for future integration
 
 ✅ Day 41 Completed Successfully
+
+---
+
+📅 Day 42 – Advanced SQL & Mentor Interaction
+
+Date: 5 February 2026
+
+🏁 Overview
+
+Day 42 focused on advanced DBMS concepts including automation and data relationships, along with a mentor-led discussion to reinforce earlier C# topics.
+
+🔹 Concepts Covered
+
+Stored Procedures and Triggers
+
+SQL Joins (combining data across multiple tables)
+
+🧩 Practical Work
+
+Learned and practiced stored procedures, triggers, and joins in SQL
+
+Participated in a mentor meeting covering:
+
+Reflection
+
+Annotations
+
+MSTest
+
+🔄 Version Control
+
+Documented SQL practice and learning outcomes
+
+Saved all related work for future database-driven projects
+
+✅ Day 42 Completed Successfully
