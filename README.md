@@ -74,3 +74,38 @@ Extended the Hospital Management System database and explored core database conc
 * SQL Server Management Studio (SSMS)
 
 ---
+# 📅 Day 3
+
+## 🏥 Project: Hospital Database
+
+### Objective
+Enhanced the Hospital Management System by implementing database automation using triggers and stored procedures, along with auditing database operations for improved data tracking and management.
+
+### Tasks Completed
+- Created a centralized **AuditLog** table to maintain records of database operations.
+- Implemented **AFTER INSERT**, **AFTER UPDATE**, and **AFTER DELETE** triggers for the **Doctor** table.
+- Implemented **AFTER INSERT**, **AFTER UPDATE**, and **AFTER DELETE** triggers for the **Patient** table.
+- Implemented **AFTER INSERT**, **AFTER UPDATE**, and **AFTER DELETE** triggers for the **Appointment** table.
+- Configured triggers to automatically record:
+  - Table Name
+  - Operation Type
+  - Record ID
+  - Previous Values
+  - Updated Values
+- Displayed operation-specific confirmation messages using `PRINT` statements.
+- Created stored procedures for performing **Insert**, **Update**, and **Delete** operations on the **Doctor** table.
+- Executed and verified stored procedures and triggers using sample data.
+- Populated the database with sample doctor and patient records for testing.
+
+### Concepts Covered
+- Database Triggers
+- Stored Procedures
+- Audit Logging
+- Data Auditing
+- INSERT, UPDATE & DELETE Operations
+- SQL Server Stored Procedure Execution
+- Trigger-Based Automation
+- Database Testing
+- SQL Server Management Studio (SSMS)
+
+---
