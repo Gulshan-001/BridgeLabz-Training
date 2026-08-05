@@ -109,3 +109,44 @@ Enhanced the Hospital Management System by implementing database automation usin
 - SQL Server Management Studio (SSMS)
 
 ---
+# 📅 Day 4
+
+## 🏥 Project: Hospital Database
+
+### Objective
+Developed a layered ADO.NET console application to perform CRUD operations on the Hospital Database while demonstrating both connected and disconnected database architectures.
+
+### Tasks Completed
+- Created a console-based Hospital Management application using .NET.
+- Designed a layered project structure with:
+  - Entity Layer
+  - Service Layer
+  - Menu Layer
+- Implemented a reusable database connection class for SQL Server connectivity.
+- Developed CRUD operations for the **Doctor** module using stored procedures.
+- Developed CRUD operations for the **Patient**, **Appointment**, and **Room** modules using parameterized SQL queries.
+- Built a nested console menu for managing different modules independently.
+- Added exception handling using `try-catch-finally` blocks across all database operations.
+- Implemented row validation using `ExecuteNonQuery()` to verify successful INSERT, UPDATE, and DELETE operations.
+- Implemented **Connected Architecture** using `SqlConnection`, `SqlCommand`, and `SqlDataReader`.
+- Implemented **Disconnected Architecture** in the Patient module using `SqlDataAdapter` and `DataSet`.
+- Verified complete CRUD functionality for all database tables through the console application.
+
+### Concepts Covered
+- ADO.NET
+- Connected Architecture
+- Disconnected Architecture
+- SqlConnection
+- SqlCommand
+- SqlDataReader
+- SqlDataAdapter
+- DataSet
+- Parameterized Queries
+- Stored Procedures
+- CRUD Operations
+- Exception Handling
+- Layered Architecture
+- SQL Server Integration
+- Console Application Development
+
+---
