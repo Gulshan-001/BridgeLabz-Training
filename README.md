@@ -144,9 +144,30 @@ Developed a layered ADO.NET console application to perform CRUD operations on th
 - Parameterized Queries
 - Stored Procedures
 - CRUD Operations
-- Exception Handling
-- Layered Architecture
-- SQL Server Integration
-- Console Application Development
+---
+## Day 5: Introduction to ASP.NET Core Web API
+
+### Topics Covered
+- Introduction to ASP.NET Core and Web APIs
+- Understanding the ASP.NET Core project structure
+- Installing and verifying .NET SDK versions
+- Scaffolding a new ASP.NET Core Web API project using the .NET CLI
+- Difference between .NET 8 (LTS) and .NET 10 Web API templates
+- Understanding OpenAPI vs Swagger
+
+### Learning Outcomes
+- Understood the purpose of ASP.NET Core Web APIs and their use in building RESTful services.
+- Learned how to scaffold a new Web API project using the .NET CLI.
+- Explored the default project structure and the purpose of the generated files.
+- Compared the .NET 8 (Swagger-based) and .NET 10 (OpenAPI-based) Web API templates.
+- Configured the development environment for ASP.NET Core development.
+- Successfully created and executed the first ASP.NET Core Web API project.
+- Learned how Swagger simplifies API documentation and testing.
+
+### Status
+- ✔️ Development environment configured.
+- ✔️ First ASP.NET Core Web API project scaffolded.
+- ✔️ Ready to begin building controllers and RESTful APIs in the next session.
+
 
 ---
