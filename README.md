@@ -171,3 +171,47 @@ Developed a layered ADO.NET console application to perform CRUD operations on th
 
 
 ---
+## Day 6: ASP.NET Core MVC & Web API Integration
+
+### 📅 Date: 07 Aug 2026
+
+### 📚 Topics Covered
+- ASP.NET Core MVC Architecture
+- MVC Folder Structure
+- Controllers, Views & Routing
+- Web API Creation
+- API Routing using Attributes
+- JavaScript Fetch API
+- JSON Response Handling
+- Session Storage
+- Navigation between MVC Views
+
+### 🛠️ Tasks Completed
+- Created a new ASP.NET Core MVC application.
+- Explored the default MVC project structure.
+- Implemented an API Controller (`GreetingsController`) to return a JSON response.
+- Created an MVC `HomeController` to serve application views.
+- Built a Home page containing a **Get Greeting** button.
+- Integrated JavaScript `fetch()` to consume the Web API asynchronously.
+- Displayed the greeting only after receiving a successful API response.
+- Implemented page redirection from the Home page to a separate Greeting page.
+- Used `sessionStorage` to transfer API data between pages.
+- Customized the default layout by removing the unused Privacy navigation link.
+- Understood the complete request lifecycle:
+  - Browser → MVC Controller → View
+  - View → Web API → JSON Response
+  - JavaScript → Redirect → Greeting View
+
+### 📂 Project
+**GreetingsApp**
+- ASP.NET Core MVC
+- ASP.NET Core Web API
+- Razor Views
+- JavaScript Fetch API
+
+### 🎯 Learning Outcome
+- Learned the responsibilities of MVC Controllers and API Controllers.
+- Understood ASP.NET Core routing and endpoint mapping.
+- Learned how MVC Views interact with Web APIs using JavaScript.
+- Gained hands-on experience with asynchronous API calls and JSON handling.
+- Understood how data can be passed between pages using browser session storage.
