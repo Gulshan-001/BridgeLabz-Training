@@ -1,0 +1,24 @@
+﻿<div style="text-align:center;margin-top:120px;">
+
+    <h1>Greetings App</h1>
+
+    <button onclick="getGreeting()">
+        Get Greeting
+    </button>
+
+</div>
+
+<script>
+
+async function getGreeting(){
+
+    const response = await fetch('/api/greetings');
+
+    const data = await response.json();
+
+    sessionStorage.setItem("greeting", data.message);
+
+    window.location.href="/Home/Greeting";
+}
+
+</script>
