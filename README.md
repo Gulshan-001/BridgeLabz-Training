@@ -215,3 +215,39 @@ Developed a layered ADO.NET console application to perform CRUD operations on th
 - Learned how MVC Views interact with Web APIs using JavaScript.
 - Gained hands-on experience with asynchronous API calls and JSON handling.
 - Understood how data can be passed between pages using browser session storage.
+---
+## Day 7 – ASP.NET Core Minimal API & Contacts CRUD
+
+### Topics Covered
+- ASP.NET Core Minimal APIs
+- Minimal API endpoint mapping
+- HTTP methods: GET, POST, PUT, DELETE
+- Entity Framework Core
+- DbContext and DbSet
+- SQL Server integration using SSMS
+- Connection strings
+- CRUD operations
+- API testing using Postman
+
+### Practical Work
+- Created a **Contacts CRUD application** using ASP.NET Core Minimal API.
+- Created a `ContactsDB` database in SQL Server.
+- Created the `Contacts` table with Id, Name, Email and Phone fields.
+- Created the `Contact` model class.
+- Created `ContactDbContext` for Entity Framework Core database interaction.
+- Configured SQL Server connection using `appsettings.json`.
+- Implemented all CRUD endpoints directly in `Program.cs` without using Controllers.
+- Tested all API endpoints using Postman.
+
+### Endpoints Implemented
+
+| Method | Endpoint | Operation |
+|--------|----------|-----------|
+| GET | `/api/contacts` | Get all contacts |
+| GET | `/api/contacts/{id}` | Get contact by ID |
+| POST | `/api/contacts` | Create a contact |
+| PUT | `/api/contacts/{id}` | Update a contact |
+| DELETE | `/api/contacts/{id}` | Delete a contact |
+
+### Key Learning
+Learned how Minimal APIs simplify ASP.NET Core API development by defining HTTP endpoints directly in `Program.cs`, eliminating the need for Controllers while still supporting complete CRUD operations with Entity Framework Core and SQL Server.
