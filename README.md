@@ -251,3 +251,49 @@ Developed a layered ADO.NET console application to perform CRUD operations on th
 
 ### Key Learning
 Learned how Minimal APIs simplify ASP.NET Core API development by defining HTTP endpoints directly in `Program.cs`, eliminating the need for Controllers while still supporting complete CRUD operations with Entity Framework Core and SQL Server.
+---
+# Day 8 – H2 Database, H2Sharp, ADO.NET & Minimal API Contacts App
+
+## Date
+11 August 2026
+
+## Topics Covered
+
+- H2 Database
+- H2Sharp for .NET
+- ADO.NET with H2
+- H2Sharp and IKVM dependencies
+- Minimal APIs
+- Layered Architecture
+- Repository Layer
+- Service Layer
+- SQL Server with ADO.NET
+- Dependency Injection
+- CRUD Operations
+- Postman API Testing
+
+---
+
+## 1. H2 Database
+
+Learned about **H2 Database**, a lightweight relational database commonly used for development, testing, and Java applications.
+
+
+## 2. Using H2 with C#
+
+Since H2 is primarily a Java database, using it from .NET requires a compatible provider.
+
+Learned about **H2Sharp**, a .NET provider for accessing H2 from C#.
+
+The H2Sharp provider uses **IKVM** to provide Java compatibility inside the .NET environment.
+
+### Dependency Flow
+
+```text
+C# Application
+      ↓
+H2Sharp
+      ↓
+IKVM
+      ↓
+H2 Database
