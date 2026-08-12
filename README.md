@@ -297,3 +297,51 @@ H2Sharp
 IKVM
       ↓
 H2 Database
+---
+## Day 9 – EF Core ORM & Contacts CRUD API
+
+### Topics Covered
+
+* Entity Framework Core (EF Core)
+* ORM concepts
+* DbContext and DbSet
+* EF Core with existing SQL Server database
+* Controller-based ASP.NET Core Web API
+* Repository and Service layers
+* Dependency Injection
+* CRUD operations using EF Core
+* Postman API testing
+
+### Work Done
+
+* Created a Contacts CRUD application using **EF Core ORM**.
+* Connected the application to the existing `ContactsDB` database on `localhost\SQLEXPRESS`.
+* Created `Contact` model and `AppDbContext`.
+* Implemented Repository and Service layers.
+* Replaced manual ADO.NET database operations with EF Core operations using `DbContext` and `DbSet`.
+* Added `ContactController` with GET, POST, PUT and DELETE endpoints.
+* Tested all CRUD operations successfully using Postman.
+* Learned how EF Core maps C# entities and properties to database tables and columns.
+* Compared EF Core ORM with the manual ADO.NET approach used previously.
+
+### Architecture
+
+```text
+Postman
+   ↓
+Controller
+   ↓
+Service
+   ↓
+Repository
+   ↓
+EF Core / DbContext
+   ↓
+Existing ContactsDB
+```
+
+### Key Learning
+
+EF Core acts as an ORM that allows working with database records as C# objects, reducing the need to manually write `SqlConnection`, `SqlCommand`, `SqlDataReader`, and SQL queries for common CRUD operations.
+
+---
