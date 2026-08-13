@@ -345,3 +345,44 @@ Existing ContactsDB
 EF Core acts as an ORM that allows working with database records as C# objects, reducing the need to manually write `SqlConnection`, `SqlCommand`, `SqlDataReader`, and SQL queries for common CRUD operations.
 
 ---
+## Day 10 – Employee Payroll System
+
+### Objective
+- Build a basic Employee Payroll System using ASP.NET Core Web API.
+- Implement a proper layered architecture with separate projects.
+- Use Entity Framework Core with SQL Server and migrations for database creation.
+- Implement and test complete Employee CRUD operations.
+
+### Technologies Used
+- C#
+- ASP.NET Core Web API
+- Entity Framework Core
+- SQL Server / SSMS
+- EF Core Migrations
+- Postman
+- Dependency Injection
+- Layered Architecture
+
+### Project Architecture
+```text
+EmployeePayroll
+│
+├── EmployeePayroll       → Web API / Presentation Layer
+│   └── Controllers
+│
+├── Business              → Business Layer
+│   ├── Interface
+│   └── Service
+│
+├── Models                → Model Layer
+│   ├── DTO
+│   ├── Entity
+│   └── Exceptions
+│
+└── Repository            → Data Access Layer
+    ├── Context
+    ├── Interface
+    ├── Service
+    └── Migrations
+
+---
