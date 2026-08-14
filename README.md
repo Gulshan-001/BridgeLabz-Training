@@ -386,3 +386,26 @@ EmployeePayroll
     └── Migrations
 
 ---
+## Day 11 – Finished Employee Payroll 
+
+### Objective
+
+* Get started with ASP.NET Core Web APIs.
+* Add Swagger for API documentation and testing.
+* Revise EF Core and migrations.
+
+### Work Done
+
+* Explored the basic structure and flow of ASP.NET Core Web APIs.
+* Added and configured `Swashbuckle.AspNetCore`.
+* Integrated Swagger UI and tested existing Employee CRUD endpoints.
+* Revised Entity Framework Core and `DbContext`.
+* Revised EF Core migrations and the `dotnet ef` workflow.
+* Reviewed the flow: Controller → Business → Repository → EF Core → SQL Server.
+
+### Key Learnings
+
+* Basics of ASP.NET Core Web APIs.
+* Swagger/OpenAPI for API testing.
+* EF Core and migration-based database management.
+---
