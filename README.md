@@ -402,6 +402,100 @@ EmployeePayroll
 * Revised Entity Framework Core and `DbContext`.
 * Revised EF Core migrations and the `dotnet ef` workflow.
 * Reviewed the flow: Controller → Business → Repository → EF Core → SQL Server.
+## Day 12 – Fundoo App: User Authentication & Backend Setup
+
+### Fundoo App
+
+Started development of the **Fundoo App**, a backend-first ASP.NET Core Web API project designed to be extended with multiple APIs and functionalities in future days.
+
+#### Project Architecture
+
+* Created a solution using a **4-layer architecture**:
+
+  * **Fundoo** – ASP.NET Core Web API / Presentation Layer
+  * **Business** – Business Logic Layer
+  * **Repository** – Data Access Layer
+  * **Models** – Entity, DTO and Exception Layer
+* Added project references to establish the flow:
+  **Controller → Business → Repository → Database**
+* Created the required folder structure:
+
+  * Business: `Interface`, `Service`
+  * Models: `DTO`, `Entity`, `Exceptions`
+  * Repository: `Context`, `Interface`, `Service`, `Migrations`
+
+#### Database Integration
+
+* Integrated **Entity Framework Core** with SQL Server.
+* Created `ApplicationDbContext` for database operations.
+* Created the `User` entity with:
+
+  * `Id`
+  * `FirstName`
+  * `LastName`
+  * `Email`
+  * `PasswordHash`
+* Configured the `FundooDb` database using a connection string.
+* Created and applied the **InitialCreate EF Core migration**.
+* Successfully created the `Users` table in the Fundoo database.
+
+#### User Registration
+
+* Created `RegisterRequestDTO` for registration requests.
+* Implemented the Repository layer using:
+
+  * `IUserRepository`
+  * `UserRepository`
+* Implemented the Business layer using:
+
+  * `IUserService`
+  * `UserService`
+* Implemented `POST /api/User/register`.
+* Added duplicate-email validation.
+* Implemented secure password hashing using `PasswordHasher<User>`.
+* Verified that passwords are stored as hashes instead of plain text.
+
+#### User Login & JWT Authentication
+
+* Created `LoginRequestDTO` and `AuthResponseDTO`.
+* Implemented `POST /api/User/login`.
+* Added password verification against the stored password hash.
+* Implemented JWT token generation with user claims.
+* Configured JWT Bearer Authentication in ASP.NET Core.
+* Added JWT settings for issuer, audience, signing key and token expiry.
+* Implemented a protected `GET /api/User/profile` endpoint using `[Authorize]`.
+* Extracted authenticated user information from JWT claims.
+
+#### Swagger Authentication
+
+* Configured Swagger to support **Bearer JWT Authentication**.
+* Added the Swagger **Authorize** functionality.
+* Tested protected API access with and without a valid JWT token.
+* Verified successful authentication and `401 Unauthorized` responses for unauthenticated requests.
+
+### APIs Implemented
+
+| Method | Endpoint             | Purpose                            |
+| ------ | -------------------- | ---------------------------------- |
+| POST   | `/api/User/register` | Register a new user                |
+| POST   | `/api/User/login`    | Authenticate user and generate JWT |
+| GET    | `/api/User/profile`  | Access authenticated user profile  |
+
+### Concepts Covered
+
+* ASP.NET Core Web API
+* Layered Architecture
+* Entity Framework Core
+* SQL Server Database Integration
+* EF Core Migrations
+* DTOs
+* Repository Pattern
+* Dependency Injection
+* Password Hashing
+* JWT Authentication
+* Authorization with `[Authorize]`
+* JWT Claims
+* Swagger API Testing
 
 ### Key Learnings
 
