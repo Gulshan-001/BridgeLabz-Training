@@ -535,3 +535,20 @@ Started development of the **Fundoo App**, a backend-first ASP.NET Core Web API 
 * EF Core and migration-based database management.
 
 ---
+## Day 13 – Fundoo App: API Concepts & Validations
+
+### Fundoo App
+
+* Continued development of the **Fundoo App** backend using ASP.NET Core Web API.
+* Added basic input validations using **Data Annotations** and regular expressions for DTOs and entities.
+* Studied **CORS (Cross-Origin Resource Sharing)** and its role in allowing controlled communication between frontend and backend applications.
+* Studied **Dependency Injection** and its role in managing dependencies and promoting loose coupling.
+* Revised DI lifetimes:
+
+  * **Transient**
+  * **Scoped**
+  * **Singleton**
+* Studied the ASP.NET Core **Request Pipeline** and middleware execution flow.
+* Revised the role of **Middleware**, `Program.cs`, and service registration in ASP.NET Core.
+* Reviewed **Model Validation**, `[ApiController]`, HTTP status codes, and API request/response handling.
+* Updated the EF Core migration to reflect entity validation constraints and successfully applied it to the Fundoo database.
