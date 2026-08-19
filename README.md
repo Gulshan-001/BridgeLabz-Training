@@ -552,3 +552,68 @@ Started development of the **Fundoo App**, a backend-first ASP.NET Core Web API 
 * Revised the role of **Middleware**, `Program.cs`, and service registration in ASP.NET Core.
 * Reviewed **Model Validation**, `[ApiController]`, HTTP status codes, and API request/response handling.
 * Updated the EF Core migration to reflect entity validation constraints and successfully applied it to the Fundoo database.
+---
+## Day 14 – Fundoo App: Notes Module
+
+### Fundoo App
+
+Continued development of the **Fundoo App** by implementing the core **Notes Module**, allowing authenticated users to create, retrieve, and delete their personal notes.
+
+#### Notes Database Integration
+
+* Created the `Note` entity with `Id`, `Title`, `Content`, and `UserId`.
+* Established a **One-to-Many relationship** between `User` and `Note`, where one user can own multiple notes.
+* Added `Notes` to `ApplicationDbContext`.
+* Created and applied the **AddNotes EF Core migration**.
+* Successfully created the `Notes` table with a foreign key referencing the `Users` table.
+
+#### Notes Layered Architecture
+
+* Extended the existing Fundoo architecture for the Notes module.
+* Created `CreateNoteRequestDTO` and `NoteResponseDTO` for API data transfer.
+* Implemented `INoteRepository` and `NoteRepository` for database operations.
+* Implemented `INoteService` and `NoteService` for business logic and Entity-to-DTO mapping.
+* Registered Notes Repository and Business services using **Dependency Injection**.
+
+#### Notes APIs
+
+Implemented four JWT-protected Notes APIs:
+
+| Method   | Endpoint         | Functionality                            |
+| -------- | ---------------- | ---------------------------------------- |
+| `POST`   | `/api/Note`      | Create a new note                        |
+| `GET`    | `/api/Note`      | Retrieve all notes of the logged-in user |
+| `GET`    | `/api/Note/{id}` | Retrieve a specific note                 |
+| `DELETE` | `/api/Note/{id}` | Delete a specific note                   |
+
+#### Authentication & User-Specific Notes
+
+* Protected the complete Notes controller using `[Authorize]`.
+* Used the authenticated user's **JWT claims** to identify the current user.
+* Retrieved the `UserId` using `ClaimTypes.NameIdentifier`.
+* Automatically associated newly created notes with the authenticated user.
+* Ensured users can only retrieve or delete **their own notes**.
+* Prevented `UserId` from being supplied manually through API requests.
+* Tested JWT Bearer authorization through Swagger.
+
+#### Concepts Covered
+
+* RESTful API design and CRUD operations
+* One-to-Many relationships in EF Core
+* Foreign Keys and navigation properties
+* Repository and Service patterns
+* DTO-to-Entity and Entity-to-DTO mapping
+* LINQ queries with user-based filtering
+* Asynchronous database operations using `async/await`
+* JWT Claims and `ClaimTypes.NameIdentifier`
+* Authentication vs Authorization
+* User-specific resource authorization
+* Dependency Injection
+* HTTP status codes including `200 OK`, `401 Unauthorized`, and `404 Not Found`
+* Swagger testing of protected APIs
+
+### Current Fundoo Backend Flow
+
+`JWT → NoteController → NoteService → NoteRepository → EF Core → FundooDb`
+
+Successfully tested **Create Note, Get All Notes, Get Note by ID, Delete Note, JWT authorization, and user-specific note access**.
