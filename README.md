@@ -617,3 +617,53 @@ Implemented four JWT-protected Notes APIs:
 `JWT → NoteController → NoteService → NoteRepository → EF Core → FundooDb`
 
 Successfully tested **Create Note, Get All Notes, Get Note by ID, Delete Note, JWT authorization, and user-specific note access**.
+---
+# Day 15 – Fundoo App: Advanced Notes Features
+
+## Fundoo App
+
+Continued development of the **Fundoo App Notes Module** by adding advanced note management features inspired by applications like Google Keep.
+
+### Notes Database Enhancement
+
+- Extended the existing `Note` entity with `IsPinned`, `IsArchived`, and `IsDeleted` properties.
+- Created and applied the `AddNoteFeatures` EF Core migration.
+- Updated the `Notes` table to support different note states.
+
+### Pin and Archive Functionality
+
+- Implemented functionality to pin and unpin notes using a toggle-based approach.
+- Implemented functionality to archive and unarchive notes.
+- Updated normal note retrieval to exclude archived and deleted notes.
+- Ensured deleted notes cannot be pinned or archived.
+
+### Trash Functionality
+
+- Modified the existing delete operation to implement **Soft Delete**.
+- Instead of permanently removing a note, `IsDeleted` is set to `true`.
+- Trashed notes remain stored in the database but are excluded from normal note retrieval and search results.
+
+### Search Functionality
+
+- Implemented note search based on note titles.
+- Used LINQ and `Contains()` to retrieve matching notes.
+- Restricted search results to notes belonging to the authenticated user.
+- Excluded deleted notes from search results.
+
+### Layered Architecture Updates
+
+- Updated `INoteRepository` and `NoteRepository` with pin, archive, trash, and search operations.
+- Updated `INoteService` and `NoteService` with the required business logic.
+- Updated `NoteController` with new JWT-protected API endpoints.
+- Continued following the existing layered architecture:
+
+```text
+NoteController
+      ↓
+NoteService
+      ↓
+NoteRepository
+      ↓
+EF Core
+      ↓
+FundooDb
