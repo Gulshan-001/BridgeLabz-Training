@@ -657,7 +657,7 @@ Continued development of the **Fundoo App Notes Module** by adding advanced note
 - Updated `NoteController` with new JWT-protected API endpoints.
 - Continued following the existing layered architecture:
 
-```text
+
 NoteController
       ↓
 NoteService
@@ -667,3 +667,62 @@ NoteRepository
 EF Core
       ↓
 FundooDb
+---
+## 📅 Day 16 – Labels Integration & Unit Testing
+
+### 🏷️ Label Management
+
+Continued development of the **Fundoo Notes Application** by implementing the Labels module similar to Google Keep.
+
+Implemented the following label functionalities:
+
+- Create a new label
+- Retrieve a label by ID
+- Retrieve all labels for a user
+- Update an existing label
+- Delete a label
+
+Each label is associated with a specific user, ensuring user-specific label management.
+
+### 🔗 Notes and Labels Integration
+
+Integrated the Notes and Labels modules using a **Many-to-Many Relationship**.
+
+Created a `NoteLabel` entity to act as a junction table between Notes and Labels.
+
+Implemented the following functionalities:
+
+- Add a label to a note
+- Remove a label from a note
+- Retrieve all labels associated with a note
+- Retrieve all notes associated with a label
+
+Configured the relationships using Entity Framework Core and resolved the SQL Server multiple cascade path issue by configuring the appropriate delete behavior.
+
+### 🧪 Unit Testing with MSTest
+
+Implemented unit testing for the Fundoo application's Business Layer using **MSTest** and **Moq**.
+
+Created a separate `FundooTests` project and added project references to the Business, Repository, and Models layers.
+
+Used **Moq** to mock repository dependencies, allowing the service layer to be tested independently without interacting with the actual database.
+
+Implemented unit tests for:
+
+- `NoteService`
+- `UserService`
+- `LabelService`
+
+Tested both successful and failure scenarios, including note creation, retrieval, pinning, archiving, deletion, searching, label management, note-label relationships, user registration, and login authentication.
+
+### ✅ Testing Result
+
+Successfully executed:
+
+**32 / 32 Unit Tests Passed**
+
+NoteServiceTests   → 18 Tests
+UserServiceTests   → 5 Tests
+LabelServiceTests  → 9 Tests
+--------------------------------
+Total              → 32 Tests Passed
