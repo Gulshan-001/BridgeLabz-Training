@@ -726,3 +726,67 @@ UserServiceTests   → 5 Tests
 LabelServiceTests  → 9 Tests
 --------------------------------
 Total              → 32 Tests Passed
+
+---
+## Day 17 – Note Reminders & RabbitMQ
+
+Today, I implemented a complete reminder processing system for notes in the Fundoo App using background services and RabbitMQ.
+
+### Note Reminder Feature
+
+- Added reminder-related properties to the `Note` entity.
+- Added support for setting a specific reminder date and time for a note.
+- Updated the Note Repository and Service layers to handle reminder functionality.
+- Added reminder information to the required DTOs and API flow.
+- Tested reminder creation successfully through the API.
+
+### Background Reminder Processing
+
+- Created a `ReminderBackgroundService` using `BackgroundService`.
+- The service continuously checks the database for notes whose reminder time has been reached.
+- Due reminders are identified using the reminder time and reminder status.
+- Added logic to prevent the same reminder from being processed repeatedly.
+- Registered the background service so it starts automatically when the Fundoo API runs.
+
+### RabbitMQ Integration
+
+- Created a separate `RabbitMQ` class library and added it to the solution.
+- Added the required RabbitMQ client package and configured the project references.
+- Implemented RabbitMQ connection and queue handling.
+- Created an `IRabbitMQProducer` interface and `RabbitMQProducer` service.
+- Due reminders are converted into reminder messages and published to `reminder_queue`.
+- Set up RabbitMQ locally using Docker.
+- Used the RabbitMQ Management UI to monitor the queue and verify published messages.
+
+### RabbitMQ Consumer
+
+- Created an `IRabbitMQConsumer` interface and implemented `RabbitMQConsumer`.
+- The consumer listens continuously to `reminder_queue`.
+- Created a `RabbitMQConsumerService` background service to automatically start the consumer when the application starts.
+- Registered the RabbitMQ Producer, Consumer, and hosted services in dependency injection.
+- Implemented message acknowledgement so successfully processed messages are removed from the queue.
+
+### Complete Reminder Flow
+
+Note reminder is scheduled  
+→ Reminder time is reached  
+→ `ReminderBackgroundService` detects the due reminder  
+→ Reminder message is published by `RabbitMQProducer`  
+→ Message is added to `reminder_queue`  
+→ `RabbitMQConsumer` receives the message  
+→ Reminder details are processed and displayed  
+→ Message is acknowledged  
+→ RabbitMQ removes the message from the queue
+
+### Testing
+
+Successfully tested the complete producer-consumer flow by scheduling note reminders and verifying that:
+
+- Due reminders were detected by the background service.
+- Messages were published to RabbitMQ.
+- Messages appeared in `reminder_queue`.
+- The RabbitMQ consumer received the reminder messages.
+- Reminder details were processed successfully.
+- Messages were acknowledged and removed from the queue.
+
+The reminder notification flow is now fully connected from the Fundoo database to RabbitMQ message processing. Actual email sending can be added later by replacing the current consumer output with an email service.
