@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Business/Business.csproj" />
+  <Project Path="Fundoo/Fundoo.csproj" />
+  <Project Path="FundooTests/FundooTests.csproj" />
+  <Project Path="Models/Models.csproj" />
+  <Project Path="RabbitMQ/RabbitMQ.csproj" />
+  <Project Path="Repository/Repository.csproj" />
+</Solution>
